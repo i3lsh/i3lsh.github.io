@@ -1,120 +1,180 @@
+للتعديل جيد
+
+جيد نوعًا ما
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>i3lsh - بطاقة تعريفية</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
-        
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-        
-        .profile-card {
-            width: 100%;
-            max-width: 500px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: right;
-        }
-        
-        .profile-header {
-            margin-bottom: 25px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-        
-        .profile-name {
-            font-size: 28px;
-            font-weight: 700;
-            margin: 0 0 5px 0;
-            color: #222;
-        }
-        
-        .profile-title {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .badges {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            background: #f0f0f0;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .about-section {
-            margin-top: 25px;
-        }
-        
-        .section-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #222;
-        }
-        
-        .about-text {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-        }
-        
-        .emoji {
-            font-size: 24px;
-            vertical-align: middle;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>بطاقة i3lsh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #0f1113, #2c2f32);
+      font-family: 'Almarai', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 60px 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+      padding: 30px 25px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    .profile {
+      width: 130px;
+      height: 130px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      position: absolute;
+      top: -65px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 80px;
+      margin-bottom: 8px;
+    }
+
+    .name img {
+      width: 16px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 25px;
+    }
+
+    .tagline img {
+      width: 15px;
+    }
+
+    .button-single {
+      margin-bottom: 20px;
+    }
+
+    .button-single a,
+    .button-row a {
+      background: #fff;
+      border-radius: 14px;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      transition: 0.2s;
+      margin-bottom: 10px;
+    }
+
+    .button-single a:hover,
+    .button-row a:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .button-single img,
+    .button-row img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .about {
+      margin-top: 40px;
+      color: #fff;
+      line-height: 1.8;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .about strong {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="profile-card">
-        <div class="profile-header">
-            <h1 class="profile-name">i3lsh <span class="emoji">💡</span></h1>
-            <p class="profile-title">فنان موسيقي</p>
-            
-            <div class="badges">
-                <div class="badge">
-                    <i class="fab fa-google"></i> Google Knowledge Panel
-                </div>
-                <div class="badge">
-                    <i class="fab fa-spotify"></i> Spotify
-                </div>
-                <div class="badge">
-                    <i class="fab fa-apple"></i> Apple
-                </div>
-            </div>
-        </div>
-        
-        <div class="about-section">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                 فنان موسيقي سعودي من مواليد عام 1995.
-            </p>
-        </div>
+
+  <div class="card">
+    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" />
+
+    <div class="name">
+      i3lsh
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" />
     </div>
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <div class="tagline">
+      فنان موسيقي
+    </div>
+
+    <div class="button-single">
+      <a href="https://g.co/kgs/Za1V5dq" target="_blank">
+        <img src="https://www.google.com/favicon.ico" alt="Google">
+        Google Knowledge Panel
+      </a>
+    </div>
+
+    <div class="button-row">
+      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" alt="Spotify">
+        Spotify
+      </a>
+      <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+        Apple Music
+      </a>
+      <a href="https://instagram.com/i3lsh" target="_blank">
+        <img src="https://www.instagram.com/favicon.ico" alt="Instagram">
+        Instagram
+      </a>
+      <a href="https://x.com/i3lsh" target="_blank">
+        <img src="https://abs.twimg.com/favicons/twitter.2.ico" alt="X">
+        Twitter (X)
+      </a>
+      <a href="https://www.tiktok.com/@i3lsh" target="_blank">
+        <img src="https://www.tiktok.com/favicon.ico" alt="TikTok">
+        TikTok
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <strong>About Me</strong>
+    فنان موسيقي سعودي من مواليد عام 1995م.
+  </div>
+
 </body>
 </html>
