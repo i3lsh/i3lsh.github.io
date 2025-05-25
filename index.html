@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>i3lsh - بطاقة شخصية</title>
+  <title>بطاقة i3lsh</title>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,7 +14,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 30px 15px;
+      padding: 60px 20px;
     }
 
     .card {
@@ -22,42 +22,41 @@
       border-radius: 30px;
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
       padding: 30px 25px;
-      max-width: 400px;
+      max-width: 360px;
       width: 100%;
       text-align: center;
+      position: relative;
     }
 
     .profile {
-      width: 150px;
-      height: 150px;
+      width: 130px;
+      height: 130px;
       border-radius: 20px;
       object-fit: cover;
-      margin: -100px auto 20px;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-      transition: 0.3s;
-    }
-
-    .profile:hover {
-      transform: scale(1.03);
-      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
+      position: absolute;
+      top: -65px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .name {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
+      margin-top: 80px;
       margin-bottom: 8px;
     }
 
     .name img {
-      width: 18px;
+      width: 16px;
     }
 
     .tagline {
-      font-size: 16px;
+      font-size: 15px;
       color: #555;
       display: flex;
       align-items: center;
@@ -67,27 +66,27 @@
     }
 
     .tagline img {
-      width: 16px;
+      width: 15px;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .buttons a {
-      background: #f9f9f9;
-      border-radius: 16px;
+      background: #fff;
+      border-radius: 14px;
       padding: 12px 16px;
       text-decoration: none;
       color: #000;
       font-weight: bold;
       display: flex;
       align-items: center;
-      justify-content: right;
-      gap: 12px;
+      justify-content: center;
+      gap: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
       transition: 0.2s;
     }
@@ -98,32 +97,30 @@
     }
 
     .buttons img {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
 
-    .email {
-      margin-top: 20px;
-      color: #333;
-      font-size: 15px;
-      direction: ltr;
+    .about {
+      margin-top: 50px;
+      color: #fff;
+      line-height: 1.8;
+      font-size: 16px;
+      text-align: center;
     }
 
-    .email a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-
-    .email a:hover {
-      text-decoration: underline;
+    .about strong {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
-  <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748249235/240B7164-680E-43C5-AF2F-13B4BB777382_cnjtgh.jpg" alt="i3lsh" />
-
   <div class="card">
+    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748249235/240B7164-680E-43C5-AF2F-13B4BB777382_cnjtgh.jpg" alt="i3lsh" />
+    
     <div class="name">
       i3lsh
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified">
@@ -139,30 +136,6 @@
         <img src="https://www.google.com/favicon.ico" alt="Google">
         Google Knowledge Panel
       </a>
-      <a href="https://x.com/i3lsh" target="_blank">
-        <img src="https://abs.twimg.com/favicons/twitter.2.ico" alt="Twitter">
-        Twitter (X)
-      </a>
-      <a href="https://instagram.com/i3lsh" target="_blank">
-        <img src="https://www.instagram.com/favicon.ico" alt="Instagram">
-        Instagram
-      </a>
-      <a href="https://www.tiktok.com/@i3lsh" target="_blank">
-        <img src="https://www.tiktok.com/favicon.ico" alt="TikTok">
-        TikTok
-      </a>
-      <a href="https://gettr.com/user/i3lsh" target="_blank">
-        <img src="https://gettr.com/favicon.ico" alt="Gettr">
-        Gettr
-      </a>
-      <a href="https://vero.co/i3lsh" target="_blank">
-        <img src="https://vero.co/favicon.ico" alt="Vero">
-        Vero
-      </a>
-      <a href="https://noomvibe.app/i3lsh" target="_blank">
-        <img src="https://noomvibe.app/favicon.ico" alt="Noomvibe">
-        Noomvibe
-      </a>
       <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" alt="Spotify">
         Spotify
@@ -172,10 +145,11 @@
         Apple Music
       </a>
     </div>
+  </div>
 
-    <div class="email">
-      للتواصل: <a href="mailto:info@i3lsh.com">info@i3lsh.com</a>
-    </div>
+  <div class="about">
+    <strong>About Me</strong>
+    إعلامي سعودي وكاتب صحفي وفنان موسيقي من مواليد عام 1995م.
   </div>
 
 </body>
