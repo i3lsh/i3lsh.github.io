@@ -1,341 +1,182 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>i3lsh - بطاقة تعريفية</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Tajawal', sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .card {
-            width: 100%;
-            max-width: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            transition: all 0.5s ease;
-            position: relative;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px) rotateX(5deg);
-            box-shadow: 0 35px 60px rgba(0, 0, 0, 0.4);
-        }
-        
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(29, 161, 242, 0.1), rgba(255, 255, 255, 0.05));
-            z-index: -1;
-        }
-        
-        .profile-header {
-            position: relative;
-            padding: 20px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.3);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            margin-bottom: 15px;
-        }
-        
-        .name {
-            color: white;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .title {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-        
-        .verified {
-            color: #1DA1F2;
-            margin-right: 5px;
-            font-size: 20px;
-        }
-        
-        .badges {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .badge {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .profile-content {
-            padding: 20px;
-        }
-        
-        .section {
-            margin-bottom: 20px;
-        }
-        
-        .section-title {
-            color: white;
-            font-size: 18px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .section-title i {
-            color: #1DA1F2;
-        }
-        
-        .about-text {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        
-        .social-links {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-        
-        .social-link {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .social-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-        }
-        
-        .social-icon {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-        
-        .social-name {
-            font-size: 11px;
-            opacity: 0.8;
-        }
-        
-        .glow {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(29, 161, 242, 0.8), transparent 70%);
-            filter: blur(20px);
-            z-index: -1;
-            animation: move-glow 10s infinite alternate;
-        }
-        
-        .glow:nth-child(2) {
-            background: radial-gradient(circle, rgba(255, 105, 180, 0.6), transparent 70%);
-            animation-delay: 2s;
-            top: 20%;
-            right: 10%;
-        }
-        
-        @keyframes move-glow {
-            0% {
-                transform: translate(0, 0);
-            }
-            100% {
-                transform: translate(50px, 50px);
-            }
-        }
-        
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-        
-        .divider {
-            height: 1px;
-            background: rgba(255, 255, 255, 0.1);
-            margin: 20px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>i3lsh - بطاقة شخصية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #0f1113, #2c2f32);
+      font-family: 'Almarai', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 30px 15px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+      padding: 30px 25px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin: -100px auto 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
+    }
+
+    .profile:hover {
+      transform: scale(1.03);
+      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .name img {
+      width: 18px;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 25px;
+    }
+
+    .tagline img {
+      width: 16px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .buttons a {
+      background: #f9f9f9;
+      border-radius: 16px;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      transition: 0.2s;
+    }
+
+    .buttons a:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .buttons img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .email {
+      margin-top: 20px;
+      color: #333;
+      font-size: 15px;
+      direction: ltr;
+    }
+
+    .email a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .email a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="glow"></div>
-        <div class="glow"></div>
-        
-        <div class="profile-header">
-            <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" class="profile-img">
-            <h1 class="name">
-                i3lsh <i class="fas fa-check-circle verified"></i>
-            </h1>
-            <div class="title">فنان موسيقي 💡</div>
-            
-            <div class="badges">
-                <div class="badge">
-                    <i class="fab fa-google"></i> Google Panel
-                </div>
-                <div class="badge">
-                    <i class="fab fa-spotify"></i> Spotify
-                </div>
-                <div class="badge">
-                    <i class="fab fa-apple"></i> Apple
-                </div>
-            </div>
-        </div>
-        
-        <div class="profile-content">
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-user"></i> نبذة عني</h2>
-                <p class="about-text">
-                    إعلامي سعودي وكانت صحفي و فنان موسيقي من مواليد عام 1995.
-                </p>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-link"></i> روابط التواصل</h2>
-                <div class="social-links">
-                    <a href="https://x.com/i3lsh" target="_blank" class="social-link">
-                        <i class="fab fa-twitter social-icon" style="color: #1DA1F2;"></i>
-                        <span class="social-name">Twitter</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@i3lsh" target="_blank" class="social-link">
-                        <i class="fab fa-tiktok social-icon" style="color: #FF0050;"></i>
-                        <span class="social-name">TikTok</span>
-                    </a>
-                    <a href="https://instagram.com/i3lsh" target="_blank" class="social-link">
-                        <i class="fab fa-instagram social-icon" style="color: #E1306C;"></i>
-                        <span class="social-name">Instagram</span>
-                    </a>
-                    <a href="https://gettr.com/user/i3lsh" target="_blank" class="social-link">
-                        <i class="fas fa-comment-dots social-icon" style="color: #7EBAFF;"></i>
-                        <span class="social-name">Gettr</span>
-                    </a>
-                    <a href="https://vero.co/i3lsh" target="_blank" class="social-link">
-                        <i class="fas fa-heart social-icon" style="color: #FF3A44;"></i>
-                        <span class="social-name">Vero</span>
-                    </a>
-                    <a href="https://noomvibe.app/i3lsh" target="_blank" class="social-link">
-                        <i class="fas fa-music social-icon" style="color: #8A2BE2;"></i>
-                        <span class="social-name">Noomvibe</span>
-                    </a>
-                    <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank" class="social-link">
-                        <i class="fab fa-apple social-icon" style="color: #A3AAAE;"></i>
-                        <span class="social-name">Apple Music</span>
-                    </a>
-                    <a href="https://g.co/kgs/Za1V5dq" target="_blank" class="social-link">
-                        <i class="fab fa-google social-icon" style="color: #4285F4;"></i>
-                        <span class="social-name">Google</span>
-                    </a>
-                    <a href="https://peoplepill.com/i/i3lsh/" target="_blank" class="social-link">
-                        <i class="fas fa-user social-icon" style="color: #FF9800;"></i>
-                        <span class="social-name">PeoplePill</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+
+  <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748249235/240B7164-680E-43C5-AF2F-13B4BB777382_cnjtgh.jpg" alt="i3lsh" />
+
+  <div class="card">
+    <div class="name">
+      i3lsh
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified">
     </div>
 
-    <script>
-        // تأثير الجسيمات
-        document.addEventListener('DOMContentLoaded', function() {
-            const card = document.querySelector('.card');
-            
-            for (let i = 0; i < 15; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                const size = Math.random() * 5 + 1;
-                const posX = Math.random() * 100;
-                const posY = Math.random() * 100;
-                const opacity = Math.random() * 0.5 + 0.1;
-                const duration = Math.random() * 10 + 5;
-                
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${posX}%`;
-                particle.style.top = `${posY}%`;
-                particle.style.opacity = opacity;
-                particle.style.animation = `float ${duration}s infinite ease-in-out`;
-                
-                card.appendChild(particle);
-            }
-            
-            // إضافة أنيميشن للجسيمات
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes float {
-                    0% {
-                        transform: translate(0, 0) rotate(0deg);
-                    }
-                    50% {
-                        transform: translate(${Math.random() * 50 - 25}px, ${Math.random() * 50 - 25}px) rotate(180deg);
-                    }
-                    100% {
-                        transform: translate(0, 0) rotate(360deg);
-                    }
-                }
-            `;
-            document.head.appendChild(style);
-        });
-    </script>
+    <div class="tagline">
+      <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="music">
+      فنان موسيقي
+    </div>
+
+    <div class="buttons">
+      <a href="https://g.co/kgs/Za1V5dq" target="_blank">
+        <img src="https://www.google.com/favicon.ico" alt="Google">
+        Google Knowledge Panel
+      </a>
+      <a href="https://x.com/i3lsh" target="_blank">
+        <img src="https://abs.twimg.com/favicons/twitter.2.ico" alt="Twitter">
+        Twitter (X)
+      </a>
+      <a href="https://instagram.com/i3lsh" target="_blank">
+        <img src="https://www.instagram.com/favicon.ico" alt="Instagram">
+        Instagram
+      </a>
+      <a href="https://www.tiktok.com/@i3lsh" target="_blank">
+        <img src="https://www.tiktok.com/favicon.ico" alt="TikTok">
+        TikTok
+      </a>
+      <a href="https://gettr.com/user/i3lsh" target="_blank">
+        <img src="https://gettr.com/favicon.ico" alt="Gettr">
+        Gettr
+      </a>
+      <a href="https://vero.co/i3lsh" target="_blank">
+        <img src="https://vero.co/favicon.ico" alt="Vero">
+        Vero
+      </a>
+      <a href="https://noomvibe.app/i3lsh" target="_blank">
+        <img src="https://noomvibe.app/favicon.ico" alt="Noomvibe">
+        Noomvibe
+      </a>
+      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" alt="Spotify">
+        Spotify
+      </a>
+      <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+        Apple Music
+      </a>
+    </div>
+
+    <div class="email">
+      للتواصل: <a href="mailto:info@i3lsh.com">info@i3lsh.com</a>
+    </div>
+  </div>
+
 </body>
 </html>
