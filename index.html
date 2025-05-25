@@ -3,39 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>بطاقة i3lsh</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>i3lsh Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --twitter-blue: #1DA1F2;
-      --spotify-green: #1DB954;
-      --apple-black: #000000;
-      --instagram-purple: #E1306C;
-      --tiktok-red: #FF0050;
-    }
-    
     body {
       margin: 0;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-      font-family: 'Tajawal', sans-serif;
+      padding: 0;
+      background: linear-gradient(to bottom right, #0f1113, #2c2f32);
+      font-family: 'Almarai', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       min-height: 100vh;
-      padding: 20px;
     }
 
     .card {
       background: #fff;
       border-radius: 30px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-      padding: 30px 25px;
-      max-width: 380px;
-      width: 100%;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+      padding: 30px;
       text-align: center;
+      width: 360px;
       position: relative;
-      margin-top: 70px;
     }
 
     .profile {
@@ -55,206 +45,121 @@
       font-size: 24px;
       font-weight: bold;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 6px;
       margin-top: 80px;
       margin-bottom: 8px;
-      color: #333;
     }
 
-    <div class="name">
-  i3lsh
-  <img class="verified-badge" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified" style="width: 18px; height: 18px; margin-top: 1px;" />
-</div> alt="verified">
+    .name img {
+      width: 18px;
+      height: 18px;
+    }
 
     .tagline {
       font-size: 16px;
       color: #555;
       margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
     }
 
-    .button-single {
-      margin-bottom: 20px;
+    .tagline i {
+      font-style: normal;
+      font-size: 14px;
     }
 
-    .button-single a,
-    .button-row a {
-      background: #fff;
-      border-radius: 14px;
-      padding: 12px 16px;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .btn {
+      background: #f9f9f9;
+      border-radius: 16px;
+      padding: 14px 18px;
       text-decoration: none;
-      color: #000;
+      color: #111;
       font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1), 
-                  0 2px 5px rgba(0, 0, 0, 0.08),
-                  inset 0 -2px 2px rgba(0,0,0,0.05);
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      margin-bottom: 10px;
-      border: 1px solid #f0f0f0;
-      position: relative;
-      overflow: hidden;
+      box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.12),
+        inset 0 -2px 3px rgba(0, 0, 0, 0.04);
+      transition: 0.25s ease-in-out;
     }
 
-    .button-single a:hover,
-    .button-row a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 
-                  0 4px 8px rgba(0, 0, 0, 0.1),
-                  inset 0 -2px 2px rgba(0,0,0,0.05);
+    .btn img {
+      width: 20px;
+      height: 20px;
     }
 
-    .button-single a:active,
-    .button-row a:active {
+    .btn:hover {
+      background: #ececec;
+      transform: translateY(-2px);
+      box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.15),
+        inset 0 -2px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn:active {
       transform: translateY(1px);
     }
 
-    .button-row {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    .about {
+      margin-top: 40px;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.8;
     }
 
-    .about-section {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid #eee;
-    }
-
-    .about-title {
+    .about strong {
+      display: block;
       font-size: 18px;
-      font-weight: bold;
-      color: #333;
       margin-bottom: 10px;
-    }
-
-    .about-text {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .contact-email {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .contact-email a {
-      color: #4285F4;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-‎    /* تأثيرات متقدمة للأيقونات */
-    .google-icon {
-      background: conic-gradient(from -45deg, #ea4335 0deg 90deg, #fbbc05 90deg 180deg, #34a853 180deg 270deg, #4285f4 270deg 360deg);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-size: 20px;
-    }
-
-    .tiktok-icon {
-      position: relative;
-      color: #000;
-    }
-
-    .tiktok-icon::before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      right: 2px;
-      bottom: 2px;
-      background: linear-gradient(to right, #25F4EE, #000000, #FE2C55);
-      z-index: -1;
-      border-radius: 50%;
-    }
-
-‎    /* تأثيرات إضافية */
-    .glow {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(29, 161, 242, 0.3), transparent 70%);
-      filter: blur(15px);
-      z-index: -1;
-      animation: float 6s infinite ease-in-out;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translate(0, 0);
-      }
-      50% {
-        transform: translate(20px, 20px);
-      }
     }
   </style>
 </head>
 <body>
 
-  <div class="glow"></div>
-  
   <div class="card">
     <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" />
 
     <div class="name">
       i3lsh
-      <img class="verified-badge" src="https://abs.twimg.com/responsive-web/client-web/verification-card-v2@3x.png" alt="Verified">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" />
     </div>
 
     <div class="tagline">
-‎      فنان موسيقي ♪
-
+      فنان موسيقي <i>♪</i>
     </div>
 
-    <div class="button-single">
-      <a href="https://g.co/kgs/Za1V5dq" target="_blank">
-        <i class="fab fa-google google-icon"></i>
+    <div class="buttons">
+      <a class="btn" href="https://g.co/kgs/Za1V5dq" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
         Google Knowledge Panel
       </a>
-    </div>
-
-    <div class="button-row">
-      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
-        <i class="fab fa-spotify" style="color: var(--spotify-green);"></i>
+      <a class="btn" href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" alt="Spotify">
         Spotify
       </a>
-      <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
-        <i class="fab fa-apple" style="color: var(--apple-black);"></i>
+      <a class="btn" href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_Music_logo.svg" alt="Apple">
         Apple Music
       </a>
-      <a href="https://instagram.com/i3lsh" target="_blank">
-        <i class="fab fa-instagram" style="color: var(--instagram-purple);"></i>
-        Instagram
-      </a>
-      <a href="https://x.com/i3lsh" target="_blank">
-        <i class="fab fa-twitter" style="color: var(--twitter-blue);"></i>
-        Twitter (X)
-      </a>
-      <a href="https://www.tiktok.com/@i3lsh" target="_blank">
-        <i class="fab fa-tiktok tiktok-icon" style="color: white; font-size: 16px;"></i>
-        TikTok
-      </a>
     </div>
+  </div>
 
-    <div class="about-section">
-      <div class="about-title">About Me</div>
-      <div class="about-text">
-‎        فنان موسيقي سعودي من مواليد عام 1995م.
-      </div>
-    </div>
-
-    <div class="contact-email">
-‎      للتواصل: <a href="mailto:info@i3lsh.com">info@i3lsh.com</a>
-    </div>
+  <div class="about">
+    <strong>About Me</strong>
+    فنان موسيقي سعودي من مواليد عام 1995م.
   </div>
 
 </body>
