@@ -7,6 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --twitter-blue: #1DA1F2;
+      --spotify-green: #1DB954;
+      --apple-black: #000000;
+      --instagram-purple: #E1306C;
+      --tiktok-red: #FF0050;
+    }
+    
     body {
       margin: 0;
       background: linear-gradient(135deg, #1a1a2e, #16213e);
@@ -56,8 +64,8 @@
     }
 
     .verified-badge {
-      color: #1DA1F2;
-      font-size: 20px;
+      width: 20px;
+      height: 20px;
     }
 
     .tagline {
@@ -82,17 +90,27 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-      transition: all 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1), 
+                  0 2px 5px rgba(0, 0, 0, 0.08),
+                  inset 0 -2px 2px rgba(0,0,0,0.05);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       margin-bottom: 10px;
       border: 1px solid #f0f0f0;
+      position: relative;
+      overflow: hidden;
     }
 
     .button-single a:hover,
     .button-row a:hover {
-      background: #f8f8f8;
       transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 
+                  0 4px 8px rgba(0, 0, 0, 0.1),
+                  inset 0 -2px 2px rgba(0,0,0,0.05);
+    }
+
+    .button-single a:active,
+    .button-row a:active {
+      transform: translateY(1px);
     }
 
     .button-row {
@@ -120,13 +138,45 @@
       line-height: 1.6;
     }
 
-‎    /* تأثيرات إضافية */
-    .social-icon {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
+    .contact-email {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
     }
 
+    .contact-email a {
+      color: #4285F4;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+‎    /* تأثيرات متقدمة للأيقونات */
+    .google-icon {
+      background: conic-gradient(from -45deg, #ea4335 0deg 90deg, #fbbc05 90deg 180deg, #34a853 180deg 270deg, #4285f4 270deg 360deg);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 20px;
+    }
+
+    .tiktok-icon {
+      position: relative;
+      color: #000;
+    }
+
+    .tiktok-icon::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      background: linear-gradient(to right, #25F4EE, #000000, #FE2C55);
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+‎    /* تأثيرات إضافية */
     .glow {
       position: absolute;
       width: 100px;
@@ -157,39 +207,40 @@
 
     <div class="name">
       i3lsh
-      <i class="fas fa-check-circle verified-badge"></i>
+      <img class="verified-badge" src="https://abs.twimg.com/responsive-web/client-web/verification-card-v2@3x.png" alt="Verified">
     </div>
 
     <div class="tagline">
-‎      فنان موسيقي
+‎      فنان موسيقي ♪
+
     </div>
 
     <div class="button-single">
       <a href="https://g.co/kgs/Za1V5dq" target="_blank">
-        <i class="fab fa-google" style="color: #4285F4;"></i>
+        <i class="fab fa-google google-icon"></i>
         Google Knowledge Panel
       </a>
     </div>
 
     <div class="button-row">
       <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
-        <i class="fab fa-spotify" style="color: #1DB954;"></i>
+        <i class="fab fa-spotify" style="color: var(--spotify-green);"></i>
         Spotify
       </a>
       <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
-        <i class="fab fa-apple" style="color: #000;"></i>
+        <i class="fab fa-apple" style="color: var(--apple-black);"></i>
         Apple Music
       </a>
       <a href="https://instagram.com/i3lsh" target="_blank">
-        <i class="fab fa-instagram" style="color: #E1306C;"></i>
+        <i class="fab fa-instagram" style="color: var(--instagram-purple);"></i>
         Instagram
       </a>
       <a href="https://x.com/i3lsh" target="_blank">
-        <i class="fab fa-twitter" style="color: #1DA1F2;"></i>
+        <i class="fab fa-twitter" style="color: var(--twitter-blue);"></i>
         Twitter (X)
       </a>
       <a href="https://www.tiktok.com/@i3lsh" target="_blank">
-        <i class="fab fa-tiktok" style="color: #FF0050;"></i>
+        <i class="fab fa-tiktok tiktok-icon" style="color: white; font-size: 16px;"></i>
         TikTok
       </a>
     </div>
@@ -197,8 +248,12 @@
     <div class="about-section">
       <div class="about-title">About Me</div>
       <div class="about-text">
-‎        فنان موسيقي سعودي من مواليد عام 1995.
+‎        فنان موسيقي سعودي من مواليد عام 1995م.
       </div>
+    </div>
+
+    <div class="contact-email">
+‎      للتواصل: <a href="mailto:info@i3lsh.com">info@i3lsh.com</a>
     </div>
   </div>
 
