@@ -3,55 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>i3lsh Card</title>
+  <title>بطاقة شخصية - i3lsh</title>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Almarai', sans-serif;
+      padding: 0;
       background: linear-gradient(to bottom right, #0f1113, #2c2f32);
-      color: #000;
+      font-family: 'Almarai', sans-serif;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
       min-height: 100vh;
-      padding: 40px 20px;
     }
 
     .card {
       background: #fff;
       border-radius: 30px;
-      padding: 30px;
-      max-width: 360px;
-      width: 100%;
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+      padding: 30px;
       text-align: center;
+      width: 360px;
     }
 
-    .card img.profile {
+    .card .profile {
       width: 150px;
       height: 150px;
       border-radius: 25px;
       object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     .name {
       font-size: 24px;
       font-weight: bold;
       display: flex;
-      align-items: center;
       justify-content: center;
-      gap: 8px;
+      align-items: center;
+      gap: 6px;
     }
 
     .name img {
       width: 18px;
+      height: 18px;
     }
 
-    .role {
+    .tagline {
       font-size: 16px;
       color: #555;
       margin-bottom: 25px;
@@ -61,7 +60,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .buttons a {
@@ -71,17 +70,22 @@
       text-decoration: none;
       color: #000;
       font-weight: bold;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       transition: all 0.2s ease-in-out;
     }
 
     .buttons a:hover {
+      background: #ececec;
       transform: translateY(-2px);
-      background: #eee;
+    }
+
+    .buttons img {
+      width: 20px;
+      height: 20px;
     }
 
     .about {
@@ -102,25 +106,27 @@
 <body>
 
   <div class="card">
-    <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748249235/240B7164-680E-43C5-AF2F-13B4BB777382_cnjtgh.jpg" class="profile" alt="i3lsh">
+    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748249235/240B7164-680E-43C5-AF2F-13B4BB777382_cnjtgh.jpg" alt="i3lsh" />
+    
     <div class="name">
       i3lsh
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" />
     </div>
-    <div class="role">فنان موسيقي</div>
+
+    <div class="tagline">فنان موسيقي</div>
 
     <div class="buttons">
       <a href="https://g.co/kgs/Za1V5dq" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" width="20">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
         Google Knowledge Panel
       </a>
-      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN?si=eP0e9p6kSg27tS0y88zH-g" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" width="20">
+      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" alt="Spotify">
         Spotify
       </a>
       <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_Music_logo.svg" width="20">
-        Apple
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_Music_logo.svg" alt="Apple">
+        Apple Music
       </a>
     </div>
   </div>
