@@ -1,127 +1,116 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>i3lsh - فنان موسيقي</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>i3lsh - بطاقة شخصية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
-      color: #ffffff;
+      background: linear-gradient(135deg, #101214, #2e2e2e);
+      font-family: 'Almarai', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      direction: rtl;
     }
 
     .card {
-      background: #ffffff;
-      color: #000;
-      border-radius: 24px;
-      padding: 30px;
-      width: 360px;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
       text-align: center;
-      transform: perspective(1000px) rotateX(4deg) rotateY(-4deg);
-      transition: 0.3s ease;
+      padding: 30px;
+      width: 370px;
+      color: #000;
     }
 
-    .card:hover {
-      transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    }
-
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 22px;
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 25px;
       object-fit: cover;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    .name {
-      font-size: 24px;
+    .username {
+      font-size: 26px;
       font-weight: bold;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 6px;
     }
 
-    .verified {
+    .username img {
       width: 20px;
     }
 
-    .subtitle {
+    .tagline {
       font-size: 16px;
-      color: #555;
-      margin-top: 4px;
-      margin-bottom: 24px;
+      color: #444;
+      margin-bottom: 25px;
     }
 
     .links {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 25px;
     }
 
-    .link-btn {
-      background: #f4f4f4;
-      padding: 10px 16px;
+    .links a {
+      background: #f0f0f0;
       border-radius: 14px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      font-size: 14px;
+      padding: 10px 15px;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: #000;
-      transition: all 0.2s ease;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      transition: 0.2s ease-in-out;
     }
 
-    .link-btn:hover {
+    .links a:hover {
+      background: #e3e3e3;
       transform: translateY(-2px);
     }
 
-    .link-btn img {
-      width: 18px;
-      height: 18px;
-    }
-
     .about {
-      margin-top: 30px;
       font-size: 14px;
-      color: #666;
+      color: #333;
       line-height: 1.8;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <img class="avatar" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh">
-    
-    <div class="name">
-      i3lsh
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" class="verified" alt="verified">
+    <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" class="profile-pic" />
+    <div class="username">
+      i3lsh <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" />
     </div>
-    
-    <div class="subtitle">فنان موسيقي</div>
+    <div class="tagline">فنان موسيقي</div>
 
     <div class="links">
-      <a href="#" class="link-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
-        Google Panel
-      </a>
-      <a href="#" class="link-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">
-        Spotify
-      </a>
-      <a href="#" class="link-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
-        Apple Music
-      </a>
+      <a href="https://g.co/kgs/Za1V5dq" target="_blank">Google Knowledge Panel</a>
+      <a href="https://peoplepill.com/i/i3lsh/" target="_blank">PeoplePill</a>
+      <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">Apple Music</a>
+      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN?si=eP0e9p6kSg27tS0y88zH-g" target="_blank">Spotify</a>
+      <a href="https://anghami.com/artist/24398175" target="_blank">Anghami</a>
+      <a href="https://i.y.qq.com/v8/playsong.html?ADTAG=ryqq.songDetail&songmid=0034cyMV019RVe&songid=0&songtype=0#webchat_redirect" target="_blank">QQ Music</a>
+      <a href="https://tidal.com/browse/artist/58033811?u" target="_blank">Tidal</a>
+      <a href="https://dzr.page.link/YnQzSgsWNeEC1SPT7" target="_blank">Deezer</a>
+      <a href="https://x.com/i3lsh" target="_blank">Twitter (X)</a>
+      <a href="https://www.tiktok.com/@i3lsh" target="_blank">TikTok</a>
+      <a href="https://gettr.com/user/i3lsh" target="_blank">Gettr</a>
+      <a href="https://instagram.com/i3lsh" target="_blank">Instagram</a>
+      <a href="https://vero.co/i3lsh" target="_blank">Vero</a>
+      <a href="https://noomvibe.app/i3lsh" target="_blank">Noomvibe</a>
     </div>
 
     <div class="about">
