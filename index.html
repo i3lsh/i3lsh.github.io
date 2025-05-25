@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>بطاقة i3lsh</title>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary-bg: #f0f0f0;
       --text-color: #555;
-      --shadow-color: rgba(163, 177, 198, 0.6);
-      --light-shadow: rgba(255, 255, 255, 0.8);
+      --shadow-color: rgba(0, 0, 0, 0.15);
     }
 
     body {
@@ -27,7 +26,7 @@
     .card {
       background: var(--primary-bg);
       border-radius: 30px;
-      box-shadow: 10px 10px 20px var(--shadow-color), -10px -10px 20px var(--light-shadow);
+      box-shadow: 0 10px 30px var(--shadow-color);
       padding: 30px 25px;
       max-width: 400px;
       width: 100%;
@@ -42,38 +41,33 @@
       border-radius: 20px;
       object-fit: cover;
       filter: grayscale(100%);
-      background-color: #444;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
       position: absolute;
       top: -65px;
       left: 50%;
       transform: translateX(-50%);
       border: 3px solid var(--primary-bg);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     .name {
       font-size: 24px;
-      font-family: 'Tajawal', sans-serif;
-      font-weight: 600;
+      font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      margin-top: 80px;
-      margin-bottom: 8px;
+      margin: 80px 0 10px;
       color: var(--text-color);
     }
 
     .verified-badge {
-      width: 18px;
-      height: 18px;
-      vertical-align: middle;
-      margin-top: -1px;
+      width: 20px;
+      height: 20px;
     }
 
     .tagline {
       font-size: 15px;
-      font-weight: 300;
+      font-weight: 400;
       color: var(--text-color);
       margin-bottom: 25px;
     }
@@ -90,40 +84,28 @@
       gap: 15px;
     }
 
- .button-single a,
-.button-row a {
-  background: #e0e0e0;
-  border-radius: 16px;
-  padding: 12px;
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: bold;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
-  position: relative;
-  min-height: 50px;
-  direction: rtl;
-}
+    .social-button {
+      background: #fff;
+      border-radius: 16px;
+      padding: 12px;
+      text-decoration: none;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+      border: 1px solid #eee;
+    }
 
-.button-single a:hover,
-.button-row a:hover {
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-  transform: translateY(2px);
-}
-
-.button-single a:active,
-.button-row a:active {
-  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
-  transform: translateY(4px);
-}
+    .social-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
 
     .icon-wrapper {
-      width: 26px;
-      height: 26px;
+      width: 30px;
+      height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -136,57 +118,50 @@
     }
 
     .about-section {
-      margin-top: 30px;
-      padding-top: 20px;
-      background: linear-gradient(to top, #000000, #1a1a1a);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: #fff;
       border-radius: 16px;
       padding: 20px;
+      margin: 25px 0;
+      text-align: center;
     }
 
     .about-title {
       font-size: 18px;
-      font-weight: 600;
-      color: #eee;
+      font-weight: 700;
+      color: #000;
       margin-bottom: 10px;
-      text-align: center;
     }
 
     .about-text {
-      font-size: 15px;
-      font-family: 'Tajawal', sans-serif;
-      font-weight: 400;
-      color: #ddd;
-      line-height: 1.8;
-      text-align: center;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
     }
 
     .email-button {
-      margin-top: 25px;
       text-align: center;
     }
 
     .email-button a {
       display: inline-block;
-      background: #4285F4;
-      color: #fff;
-      font-weight: bold;
-      padding: 12px 20px;
+      background: #fff;
+      color: #333;
+      padding: 12px 25px;
       border-radius: 12px;
       text-decoration: none;
-      box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
-      transition: 0.3s ease;
+      font-weight: 500;
+      border: 1px solid #ddd;
+      transition: all 0.2s ease;
     }
 
     .email-button a:hover {
-      background: #2a6ae2;
+      background: #f5f5f5;
     }
   </style>
 </head>
 <body>
-
   <div class="card">
-    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" />
+    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh">
 
     <div class="name">
       i3lsh
@@ -196,88 +171,75 @@
     <div class="tagline">فنان موسيقي</div>
 
     <div class="buttons-container">
-      <div class="button-single">
-        <a href="https://g.co/kgs/Za1V5dq" target="_blank">
-          <div class="icon-wrapper">
-            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
-          </div>
-          Google Knowledge Panel
-        </a>
-      </div>
-
       <div class="button-row">
-        <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
+        <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" class="social-button" target="_blank">
           <div class="icon-wrapper">
             <img class="icon" src="https://www.svgrepo.com/show/475684/spotify-color.svg" alt="Spotify">
           </div>
           Spotify
         </a>
-        <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
+        <a href="http://music.apple.com/us/artist/i3lsh/1812249253" class="social-button" target="_blank">
           <div class="icon-wrapper">
-            <img class="icon" src="https://www.svgrepo.com/show/349299/apple-music.svg" alt="Apple">
+            <img class="icon" src="https://www.svgrepo.com/show/349299/apple-music.svg" alt="Apple Music">
           </div>
           Apple Music
         </a>
       </div>
 
       <div class="button-row">
-        <a href="https://instagram.com/i3lsh" target="_blank">
+        <a href="https://instagram.com/i3lsh" class="social-button" target="_blank">
           <div class="icon-wrapper">
-            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            <img class="icon" src="https://www.svgrepo.com/show/452123/instagram.svg" alt="Instagram">
           </div>
           Instagram
         </a>
-        <a href="https://x.com/i3lsh" target="_blank">
+        <a href="https://x.com/i3lsh" class="social-button" target="_blank">
           <div class="icon-wrapper">
-            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X">
+            <img class="icon" src="https://www.svgrepo.com/show/448266/x.svg" alt="X">
           </div>
-           X
+          X
         </a>
       </div>
 
       <div class="button-row">
-        <a href="https://www.tiktok.com/@i3lsh" target="_blank">
+        <a href="https://www.tiktok.com/@i3lsh" class="social-button" target="_blank">
           <div class="icon-wrapper">
             <img class="icon" src="https://www.svgrepo.com/show/452114/tiktok.svg" alt="TikTok">
           </div>
           TikTok
         </a>
-        <a href="https://play.anghami.com/artist/24398175" target="_blank">
+        <a href="https://play.anghami.com/artist/24398175" class="social-button" target="_blank">
           <div class="icon-wrapper">
-            <img class="icon" src="https://cdn.brandfetch.io/id4G4LfCWL/w/400/h/400/theme/dark/icon.jpeg" alt="Anghami">
+            <img class="icon" src="https://cdn.anghami.com/web/assets/anghami-og-image.jpg" alt="Anghami">
           </div>
           Anghami
         </a>
       </div>
 
       <div class="button-row">
-        <a href="https://www.snapchat.com/add/i3lsh" target="_blank">
+        <a href="https://www.snapchat.com/add/i3lsh" class="social-button" target="_blank">
           <div class="icon-wrapper">
             <img class="icon" src="https://www.svgrepo.com/show/303130/snapchat-logo.svg" alt="Snapchat">
           </div>
           Snapchat
         </a>
-      </div>
-
-      <div class="button-single">
-        <a href="mailto:info@i3lsh.com" target="_blank">
+        <a href="mailto:info@i3lsh.com" class="social-button" target="_blank">
           <div class="icon-wrapper">
-            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email">
+            <img class="icon" src="https://www.svgrepo.com/show/475700/email.svg" alt="Email">
           </div>
-          Contact Me
+          البريد الإلكتروني
         </a>
       </div>
     </div>
 
     <div class="about-section">
-      <div class="about-title">About Me</div>
-      <div class="about-text">فنان موسيقي وناشط اجتماعي سعودي من مواليد عام 1995م.</div>
+      <h2 class="about-title">معلومات عني</h2>
+      <p class="about-text">فنان موسيقي وناشط اجتماعي سعودي من مواليد عام 1995م</p>
     </div>
 
     <div class="email-button">
       <a href="mailto:info@i3lsh.com">info@i3lsh.com</a>
     </div>
   </div>
-
 </body>
 </html>
