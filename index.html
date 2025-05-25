@@ -13,8 +13,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       direction: rtl;
+      padding: 20px;
     }
 
     .card {
@@ -28,9 +29,9 @@
     }
 
     .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 25px;
+      width: 100%;
+      max-height: 220px;
+      border-radius: 20px;
       object-fit: cover;
       margin-bottom: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -71,7 +72,8 @@
       font-weight: 600;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: right;
+      gap: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
       transition: 0.2s ease-in-out;
     }
@@ -79,6 +81,11 @@
     .links a:hover {
       background: #e3e3e3;
       transform: translateY(-2px);
+    }
+
+    .links img {
+      width: 20px;
+      height: 20px;
     }
 
     .about {
@@ -90,27 +97,27 @@
 </head>
 <body>
   <div class="card">
-    <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" class="profile-pic" />
+    <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748246543/B01A5218-33D1-46F2-9E7D-74987E63CA7B_rvxyx3.jpg" alt="i3lsh" class="profile-pic" />
     <div class="username">
       i3lsh <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" />
     </div>
     <div class="tagline">فنان موسيقي</div>
 
     <div class="links">
-      <a href="https://g.co/kgs/Za1V5dq" target="_blank">Google Knowledge Panel</a>
-      <a href="https://peoplepill.com/i/i3lsh/" target="_blank">PeoplePill</a>
-      <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">Apple Music</a>
-      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN?si=eP0e9p6kSg27tS0y88zH-g" target="_blank">Spotify</a>
-      <a href="https://anghami.com/artist/24398175" target="_blank">Anghami</a>
-      <a href="https://i.y.qq.com/v8/playsong.html?ADTAG=ryqq.songDetail&songmid=0034cyMV019RVe&songid=0&songtype=0#webchat_redirect" target="_blank">QQ Music</a>
-      <a href="https://tidal.com/browse/artist/58033811?u" target="_blank">Tidal</a>
-      <a href="https://dzr.page.link/YnQzSgsWNeEC1SPT7" target="_blank">Deezer</a>
-      <a href="https://x.com/i3lsh" target="_blank">Twitter (X)</a>
-      <a href="https://www.tiktok.com/@i3lsh" target="_blank">TikTok</a>
-      <a href="https://gettr.com/user/i3lsh" target="_blank">Gettr</a>
-      <a href="https://instagram.com/i3lsh" target="_blank">Instagram</a>
-      <a href="https://vero.co/i3lsh" target="_blank">Vero</a>
-      <a href="https://noomvibe.app/i3lsh" target="_blank">Noomvibe</a>
+      <a href="https://g.co/kgs/Za1V5dq" target="_blank"><img src="https://www.google.com/favicon.ico">Google Knowledge Panel</a>
+      <a href="https://peoplepill.com/i/i3lsh/" target="_blank"><img src="https://peoplepill.com/favicon.ico">PeoplePill</a>
+      <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">Apple Music</a>
+      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN?si=eP0e9p6kSg27tS0y88zH-g" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">Spotify</a>
+      <a href="https://anghami.com/artist/24398175" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Anghami_Logo.png">Anghami</a>
+      <a href="https://i.y.qq.com/v8/playsong.html?ADTAG=ryqq.songDetail&songmid=0034cyMV019RVe&songid=0&songtype=0#webchat_redirect" target="_blank"><img src="https://y.qq.com/favicon.ico">QQ Music</a>
+      <a href="https://tidal.com/browse/artist/58033811?u" target="_blank"><img src="https://tidal.com/favicon.ico">Tidal</a>
+      <a href="https://dzr.page.link/YnQzSgsWNeEC1SPT7" target="_blank"><img src="https://e-cdns-images.dzcdn.net/images/favicon.png">Deezer</a>
+      <a href="https://x.com/i3lsh" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.2.ico">Twitter (X)</a>
+      <a href="https://www.tiktok.com/@i3lsh" target="_blank"><img src="https://www.tiktok.com/favicon.ico">TikTok</a>
+      <a href="https://gettr.com/user/i3lsh" target="_blank"><img src="https://gettr.com/favicon.ico">Gettr</a>
+      <a href="https://instagram.com/i3lsh" target="_blank"><img src="https://www.instagram.com/favicon.ico">Instagram</a>
+      <a href="https://vero.co/i3lsh" target="_blank"><img src="https://vero.co/favicon.ico">Vero</a>
+      <a href="https://noomvibe.app/i3lsh" target="_blank"><img src="https://noomvibe.app/favicon.ico">Noomvibe</a>
     </div>
 
     <div class="about">
