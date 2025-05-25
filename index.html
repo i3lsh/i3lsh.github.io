@@ -69,14 +69,12 @@
       width: 15px;
     }
 
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    .button-single {
       margin-bottom: 20px;
     }
 
-    .buttons a {
+    .button-single a,
+    .button-row a {
       background: #fff;
       border-radius: 14px;
       padding: 12px 16px;
@@ -89,20 +87,29 @@
       gap: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
       transition: 0.2s;
+      margin-bottom: 10px;
     }
 
-    .buttons a:hover {
+    .button-single a:hover,
+    .button-row a:hover {
       background: #f0f0f0;
       transform: translateY(-2px);
     }
 
-    .buttons img {
+    .button-single img,
+    .button-row img {
       width: 20px;
       height: 20px;
     }
 
+    .button-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .about {
-      margin-top: 50px;
+      margin-top: 40px;
       color: #fff;
       line-height: 1.8;
       font-size: 16px;
@@ -120,10 +127,10 @@
 
   <div class="card">
     <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748249235/240B7164-680E-43C5-AF2F-13B4BB777382_cnjtgh.jpg" alt="i3lsh" />
-    
+
     <div class="name">
       i3lsh
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" />
     </div>
 
     <div class="tagline">
@@ -131,11 +138,14 @@
       فنان موسيقي
     </div>
 
-    <div class="buttons">
+    <div class="button-single">
       <a href="https://g.co/kgs/Za1V5dq" target="_blank">
         <img src="https://www.google.com/favicon.ico" alt="Google">
         Google Knowledge Panel
       </a>
+    </div>
+
+    <div class="button-row">
       <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" alt="Spotify">
         Spotify
@@ -143,6 +153,18 @@
       <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
         Apple Music
+      </a>
+      <a href="https://instagram.com/i3lsh" target="_blank">
+        <img src="https://www.instagram.com/favicon.ico" alt="Instagram">
+        Instagram
+      </a>
+      <a href="https://x.com/i3lsh" target="_blank">
+        <img src="https://abs.twimg.com/favicons/twitter.2.ico" alt="Twitter">
+        Twitter (X)
+      </a>
+      <a href="https://www.tiktok.com/@i3lsh" target="_blank">
+        <img src="https://www.tiktok.com/favicon.ico" alt="TikTok">
+        TikTok
       </a>
     </div>
   </div>
