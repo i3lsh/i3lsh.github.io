@@ -2,82 +2,112 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>i3lsh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
+      background: radial-gradient(circle at top right, #1c1c1c, #000);
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
     }
 
     .card {
       background: #fff;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      padding: 30px;
+      border-radius: 30px;
+      padding: 30px 40px;
       text-align: center;
-      width: 300px;
-      transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+      width: 340px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      transform: perspective(1000px) rotateX(4deg) rotateY(-4deg);
     }
 
     .avatar {
       width: 120px;
       height: 120px;
-      border-radius: 15px;
+      border-radius: 20px;
       object-fit: cover;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
-    .name {
-      font-size: 24px;
-      font-weight: bold;
+    h1 {
+      font-size: 22px;
       margin: 15px 0 5px;
+      color: #111;
     }
 
     .verified {
       color: #1da1f2;
       font-size: 18px;
+      margin-right: 5px;
       vertical-align: middle;
     }
 
-    .role {
-      font-size: 15px;
-      color: #666;
-      margin-bottom: 20px;
+    p.role {
+      margin: 5px 0 20px;
+      color: #444;
     }
 
-    .socials a {
-      margin: 0 8px;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .buttons a {
+      background: #f2f2f2;
+      padding: 10px 15px;
+      border-radius: 15px;
+      color: #111;
       text-decoration: none;
-      color: #333;
-      font-size: 20px;
-      transition: transform 0.2s;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
     }
 
-    .socials a:hover {
-      transform: scale(1.2);
+    .buttons a:hover {
+      background: #ddd;
+    }
+
+    .buttons img {
+      height: 20px;
+      margin-left: 10px;
+    }
+
+    .about {
+      color: #ddd;
+      margin-top: 20px;
+      font-size: 15px;
+      text-align: center;
+      line-height: 1.6;
     }
   </style>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="card">
-    <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-_____.jpg" alt="i3lsh" class="avatar">
-    <div class="name">i3lsh <i class="fas fa-check-circle verified"></i></div>
-    <div class="role">فنان موسيقي</div>
-    <div class="socials">
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-      <a href="#"><i class="fab fa-spotify"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
+    <img class="avatar" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-____.jpg" alt="i3lsh">
+    <h1><i class="fas fa-check-circle verified"></i>i3lsh</h1>
+    <p class="role">فنان موسيقي</p>
+    <div class="buttons">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" width="20"> Google Knowledge Panel</a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" width="20"> Spotify</a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" width="20"> Apple Music</a>
+    </div>
+    <div class="about">
+      <h3>About Me</h3>
+      إعلامي سعودي وكاتب صحفي وفنان موسيقي <br>
+      من مواليد عام 1995.
     </div>
   </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
