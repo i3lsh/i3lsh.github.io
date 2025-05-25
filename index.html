@@ -3,138 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>بطاقة شخصية - i3lsh</title>
-  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+  <title>i3lsh</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #0f1113, #2c2f32);
-      font-family: 'Almarai', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      min-height: 100vh;
+      height: 100vh;
+      color: #fff;
     }
-
     .card {
       background: #fff;
       border-radius: 30px;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
       padding: 30px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
       text-align: center;
-      width: 360px;
+      width: 330px;
+      transform: rotate(-1deg);
     }
-
-    .card .profile {
-      width: 150px;
-      height: 150px;
-      border-radius: 25px;
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
       object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
       margin-bottom: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
-
     .name {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: bold;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .name img {
-      width: 18px;
-      height: 18px;
-    }
-
-    .tagline {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 25px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-bottom: 25px;
-    }
-
-    .buttons a {
-      background: #f9f9f9;
-      border-radius: 16px;
-      padding: 12px 15px;
-      text-decoration: none;
       color: #000;
-      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge {
+      width: 20px;
+    }
+    .title {
+      color: #444;
+      margin: 8px 0 20px;
+      font-size: 18px;
+    }
+    .links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+    .btn {
+      background: #f2f2f2;
+      border-radius: 14px;
+      padding: 12px 18px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      transition: all 0.2s ease-in-out;
+      gap: 8px;
+      color: #000;
+      font-weight: 500;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
-
-    .buttons a:hover {
-      background: #ececec;
-      transform: translateY(-2px);
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
-
-    .buttons img {
-      width: 20px;
-      height: 20px;
-    }
-
-    .about {
-      margin-top: 40px;
-      color: #fff;
-      font-size: 16px;
-      text-align: center;
+    .desc {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #666;
       line-height: 1.8;
-    }
-
-    .about strong {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-
   <div class="card">
-    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748249235/240B7164-680E-43C5-AF2F-13B4BB777382_cnjtgh.jpg" alt="i3lsh" />
-    
+    <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" class="avatar" alt="i3lsh">
     <div class="name">
-      i3lsh
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" />
+      i3lsh <img class="badge" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified">
     </div>
-
-    <div class="tagline">فنان موسيقي</div>
-
-    <div class="buttons">
-      <a href="https://g.co/kgs/Za1V5dq" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
-        Google Knowledge Panel
-      </a>
-      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" alt="Spotify">
-        Spotify
-      </a>
-      <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_Music_logo.svg" alt="Apple">
-        Apple Music
-      </a>
+    <div class="title">فنان موسيقي</div>
+    <div class="links">
+      <a class="btn" href="#"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="18"> Google Panel</a>
+      <a class="btn" href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" width="18"> Spotify</a>
+      <a class="btn" href="#"><img src="https://cdn-icons-png.flaticon.com/512/732/732229.png" width="18"> Apple Music</a>
     </div>
+    <div class="desc">إعلامي سعودي وكاتب صحفي وفنان موسيقي من مواليد عام 1995.</div>
   </div>
+</body>
+</html>
 
-  <div class="about">
-    <strong>About Me</strong>
-    إعلامي سعودي وكاتب صحفي وفنان موسيقي<br>من مواليد عام 1995.
-  </div>
 
 </body>
 </html>
