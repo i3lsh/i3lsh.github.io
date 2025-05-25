@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>i3lsh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f5f5f5;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f8f4ff;
       color: #222;
       text-align: center;
       margin: 0;
@@ -23,19 +25,19 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      border: 3px solid #6a0dad;
     }
     .username {
       font-size: 24px;
       font-weight: bold;
-      color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
-    .username img {
-      width: 20px;
+    .username i {
+      color: #1da1f2;
     }
     .tagline {
       font-size: 16px;
@@ -43,35 +45,41 @@
       margin-bottom: 30px;
     }
     .link-btn {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
       background-color: #6a0dad;
       color: white;
       text-decoration: none;
       padding: 14px;
       border-radius: 10px;
       margin: 10px 0;
+      font-size: 16px;
       transition: background 0.3s;
     }
     .link-btn:hover {
       background-color: #5800a1;
     }
+    .link-btn i {
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://i.imgur.com/YOw7KcH.jpg" alt="i3lsh" class="profile-img">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ-e_PyFm9bCA9NFftuv97Q2wjAozDHstf3i9clSSSycbhmbN4" alt="i3lsh" class="profile-img">
     <div class="username">
-      @i3lsh
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified">
+      @i3lsh <i class="fa-solid fa-circle-check"></i>
     </div>
     <div class="tagline">فنان موسيقي</div>
 
-    <a href="https://g.co/kgs/Za1V5dq" class="link-btn" target="_blank">Google Knowledge Panel</a>
-    <a href="https://instagram.com/i3lsh" class="link-btn" target="_blank">Instagram</a>
-    <a href="https://tiktok.com/@i3lsh" class="link-btn" target="_blank">TikTok</a>
-    <a href="https://youtube.com/@i3lsh" class="link-btn" target="_blank">YouTube</a>
-    <a href="https://music.apple.com/profile/i3lsh" class="link-btn" target="_blank">Apple Music</a>
-    <a href="https://open.spotify.com/artist/i3lsh" class="link-btn" target="_blank">Spotify</a>
+    <a href="https://g.co/kgs/Za1V5dq" class="link-btn" target="_blank"><i class="fab fa-google"></i> Google Knowledge Panel</a>
+    <a href="https://instagram.com/i3lsh" class="link-btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://tiktok.com/@i3lsh" class="link-btn" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a href="https://youtube.com/@i3lsh" class="link-btn" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+    <a href="https://music.apple.com/profile/i3lsh" class="link-btn" target="_blank"><i class="fab fa-apple"></i> Apple Music</a>
+    <a href="https://open.spotify.com/artist/i3lsh" class="link-btn" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
   </div>
 </body>
 </html>
