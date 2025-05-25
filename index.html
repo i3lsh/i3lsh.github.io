@@ -1,87 +1,85 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>i3lsh | فنان موسيقي</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>i3lsh - فنان موسيقي</title>
   <style>
     body {
-      background: linear-gradient(145deg, #ece9f1, #f3f3f3);
-      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: start;
-      min-height: 100vh;
+      height: 100vh;
       margin: 0;
-      padding: 40px 20px;
     }
-    .card {
-      background: #fff;
-      padding: 30px;
+
+    .profile-card {
+      background: white;
       border-radius: 20px;
-      box-shadow: 10px 10px 30px #cfcfcf, -10px -10px 30px #ffffff;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      width: 360px;
       text-align: center;
-      width: 90%;
-      max-width: 420px;
+      transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
     }
-    .profile-img {
+
+    .profile-card img {
       width: 130px;
       height: 130px;
-      border-radius: 20px;
+      border-radius: 16px;
       object-fit: cover;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
+
     .username {
-      font-size: 1.6rem;
+      margin: 10px 0 5px;
+      font-size: 24px;
       font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: #222;
     }
-    .check {
-      width: 20px;
-      height: 20px;
+
+    .verified {
+      color: #1da1f2;
+      font-size: 18px;
       margin-right: 6px;
+      vertical-align: middle;
     }
-    .bio {
-      margin-top: 8px;
+
+    .role {
+      font-size: 16px;
       color: #555;
-      font-size: 1rem;
+      margin-bottom: 20px;
     }
-    .links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-      gap: 15px;
+
+    .icons {
+      margin-top: 15px;
     }
-    .links a img {
-      width: 35px;
-      height: 35px;
-      transition: transform 0.2s ease;
+
+    .icons a img {
+      width: 32px;
+      height: 32px;
+      margin: 0 8px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
     }
-    .links a:hover img {
-      transform: scale(1.2);
+
+    .icons a:hover img {
+      filter: none;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ-e_PyFm9bCA9NFftuv97Q2wjAozDHstf3i9clSSSycbhmbN4" alt="i3lsh" class="profile-img">
-    <div class="username">
-      i3lsh
-      <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified">
-    </div>
-    <div class="bio">فنان موسيقي</div>
-    <div class="links">
-      <a href="https://x.com/i3lsh"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
-      <a href="https://instagram.com/i3lsh"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-      <a href="https://tiktok.com/@i3lsh"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png" alt="TikTok"></a>
-      <a href="https://youtube.com/@i3lsh"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
-      <a href="https://open.spotify.com/artist/your-link"><img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="Spotify"></a>
+  <div class="profile-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ-e_PyFm9bCA9NFftuv97Q2wjAozDHstf3i9clSSSycbhmbN4" alt="Profile Picture">
+    <div class="username"><span class="verified">✔️</span> i3lsh</div>
+    <div class="role">فنان موسيقي</div>
+    <div class="icons">
+      <a href="https://instagram.com/i3lsh" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Instagram"></a>
+      <a href="https://tiktok.com/@i3lsh" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="TikTok"></a>
+      <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="Spotify"></a>
+      <a href="https://youtube.com/@i3lsh" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+      <a href="https://x.com/i3lsh" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
     </div>
   </div>
 </body>
