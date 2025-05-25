@@ -2,91 +2,126 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>i3lsh - فنان موسيقي</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background: linear-gradient(145deg, #0f0f0f, #1c1c1c);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+      color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      color: #fff;
+      height: 100vh;
     }
+
     .card {
-      background: #fff;
-      border-radius: 30px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-      padding: 2rem;
+      background: #ffffff;
+      color: #000;
+      border-radius: 24px;
+      padding: 30px;
+      width: 360px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
       text-align: center;
-      width: 340px;
-      transform: perspective(800px) rotateX(3deg) rotateY(-3deg);
+      transform: perspective(1000px) rotateX(4deg) rotateY(-4deg);
+      transition: 0.3s ease;
     }
-    .card img.profile {
+
+    .card:hover {
+      transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    }
+
+    .avatar {
       width: 120px;
       height: 120px;
-      border-radius: 24px;
+      border-radius: 22px;
       object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      margin-bottom: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      margin-bottom: 16px;
     }
-    .card h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      color: #111;
-    }
-    .verified {
-      width: 20px;
-      margin-right: 5px;
-      vertical-align: middle;
-    }
-    .subtitle {
-      color: #555;
-      margin: 0.25rem 0 1rem;
-      font-size: 0.95rem;
-    }
-    .links {
-      display: flex;
-      justify-content: space-around;
-      margin: 1.5rem 0;
-    }
-    .links a {
-      text-decoration: none;
-      background: #f1f1f1;
-      padding: 0.7rem 1rem;
-      border-radius: 14px;
-      color: #111;
-      font-weight: 500;
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.2s;
+      justify-content: center;
+      gap: 6px;
     }
-    .links a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+    .verified {
+      width: 20px;
     }
+
+    .subtitle {
+      font-size: 16px;
+      color: #555;
+      margin-top: 4px;
+      margin-bottom: 24px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .link-btn {
+      background: #f4f4f4;
+      padding: 10px 16px;
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #000;
+      transition: all 0.2s ease;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .link-btn img {
+      width: 18px;
+      height: 18px;
+    }
+
     .about {
-      margin-top: 2rem;
-      color: #ccc;
-      font-size: 0.9rem;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.8;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh">
-    <h1><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" class="verified">i3lsh</h1>
-    <p class="subtitle">فنان موسيقي</p>
+    <img class="avatar" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh">
+    
+    <div class="name">
+      i3lsh
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" class="verified" alt="verified">
+    </div>
+    
+    <div class="subtitle">فنان موسيقي</div>
 
     <div class="links">
-      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="20">Google Panel</a>
-      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" width="20">Spotify</a>
-      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" width="20">Apple Music</a>
+      <a href="#" class="link-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+        Google Panel
+      </a>
+      <a href="#" class="link-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">
+        Spotify
+      </a>
+      <a href="#" class="link-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
+        Apple Music
+      </a>
     </div>
 
     <div class="about">
