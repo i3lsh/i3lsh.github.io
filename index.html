@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>i3lsh - البطاقة الرسمية</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>بطاقة i3lsh</title>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary-bg: #f0f0f0;
-      --text-color: #2d3436;
+      --button-bg: #f0f0f0;
+      --text-color: #555;
       --shadow-color: rgba(163, 177, 198, 0.6);
       --light-shadow: rgba(255, 255, 255, 0.8);
     }
-
+    
     body {
       margin: 0;
       background: var(--primary-bg);
@@ -21,141 +22,240 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      padding: 20px;
     }
 
     .card {
       background: var(--primary-bg);
-      border-radius: 25px;
+      border-radius: 30px;
       box-shadow: 
-        12px 12px 24px var(--shadow-color),
-        -12px -12px 24px var(--light-shadow);
-      padding: 30px;
-      width: 320px;
+        10px 10px 20px var(--shadow-color),
+        -10px -10px 20px var(--light-shadow);
+      padding: 30px 25px;
+      max-width: 380px;
+      width: 100%;
       text-align: center;
       position: relative;
+      margin-top: 70px;
     }
 
-    .header {
-      margin-bottom: 25px;
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 15px;
+    .profile {
+      width: 130px;
+      height: 130px;
+      border-radius: 20px;
+      object-fit: cover;
       box-shadow: 
-        6px 6px 12px var(--shadow-color),
-        -6px -6px 12px var(--light-shadow);
-      margin: 0 auto 15px;
+        8px 8px 15px var(--shadow-color),
+        -8px -8px 15px var(--light-shadow);
+      position: absolute;
+      top: -65px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 3px solid var(--primary-bg);
     }
 
     .name {
       font-size: 24px;
-      color: var(--text-color);
-      margin: 0;
+      font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
+      margin-top: 80px;
+      margin-bottom: 8px;
+      color: var(--text-color);
     }
 
     .verified-badge {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
     }
 
-    .platforms {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
+    .tagline {
+      font-size: 16px;
+      color: var(--text-color);
       margin-bottom: 25px;
     }
 
-    .platform {
-      background: var(--primary-bg);
-      border-radius: 15px;
-      padding: 12px;
-      box-shadow: 
-        6px 6px 12px var(--shadow-color),
-        -6px -6px 12px var(--light-shadow);
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .button-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .button-single a,
+    .button-row a {
+      background: var(--button-bg);
+      border-radius: 16px;
+      padding: 15px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       transition: all 0.3s ease;
+      box-shadow:
+        6px 6px 12px var(--shadow-color),
+        -6px -6px 12px var(--light-shadow);
+      position: relative;
+      min-height: 50px;
     }
 
-    .platform:hover {
-      transform: translateY(-3px);
+    .button-single a:hover,
+    .button-row a:hover {
+      box-shadow:
+        4px 4px 8px var(--shadow-color),
+        -4px -4px 8px var(--light-shadow);
+      transform: translateY(2px);
     }
 
-    .platform-icon {
-      width: 24px;
-      height: 24px;
+    .button-single a:active,
+    .button-row a:active {
+      box-shadow:
+        inset 3px 3px 5px var(--shadow-color),
+        inset -3px -3px 5px var(--light-shadow);
+      transform: translateY(4px);
     }
 
-    .platform-name {
-      color: var(--text-color);
-      font-weight: 500;
-      margin: 0;
+    .icon-wrapper {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .website {
-      display: block;
-      color: #4285f4;
-      text-decoration: none;
+    .icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .about-section {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .about-title {
+      font-size: 18px;
       font-weight: bold;
-      margin-top: 20px;
-      padding: 12px;
-      border-radius: 10px;
-      box-shadow: 
-        inset 3px 3px 6px var(--shadow-color),
-        inset -3px -3px 6px var(--light-shadow);
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .contact-email {
+      margin-top: 25px;
+      font-size: 14px;
+      color: var(--text-color);
+    }
+
+    .contact-email a {
+      color: #4285F4;
+      text-decoration: none;
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
+  
   <div class="card">
-    <div class="header">
-      <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" class="logo">
-      <h1 class="name">
-        i3lsh
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified" class="verified-badge">
-      </h1>
+    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" />
+
+    <div class="name">
+      i3lsh
+      <img class="verified-badge" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified">
     </div>
 
-    <div class="platforms">
-      <!-- Google Knowledge Panel -->
-      <div class="platform">
-        <img src="https://www.gstatic.com/images/branding/product/1x/knowledge_panel_48dp.png" alt="Google" class="platform-icon">
-        <p class="platform-name">لوحة المعرفة</p>
+    <div class="tagline">
+      فنان موسيقي
+    </div>
+
+    <div class="buttons-container">
+      <div class="button-single">
+        <a href="https://g.co/kgs/Za1V5dq" target="_blank">
+          <div class="icon-wrapper">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972-3.332 0-6.033-2.701-6.033-6.032s2.701-6.032 6.033-6.032c1.498 0 2.866.549 3.921 1.453l2.814-2.814C17.503 2.988 15.139 2 12.545 2 7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748L12.545 10.239z"/>
+            </svg>
+          </div>
+          <span>Google Knowledge Panel</span>
+        </a>
       </div>
 
-      <!-- Apple Music -->
-      <div class="platform">
-        <svg class="platform-icon" viewBox="0 0 24 24">
-          <path fill="#000" d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97 14.32 22 13.89 21.18 12.37 21.18 10.84 21.18 10.37 21.95 9.1 22 7.79 22.05 6.8 20.68 5.96 19.47 4.25 17 2.94 12.45 4.7 9.39 5.57 7.87 7.13 6.91 8.82 6.88 10.1 6.86 11.32 7.75 12.11 7.75 12.89 7.75 14.37 6.68 15.92 6.84 16.57 6.87 18.39 7.1 19.56 8.82 19.47 8.88 17.39 10.1 17.41 12.63 17.44 15.65 20.06 16.66 20.09 16.67 20.06 16.74 19.67 18.11 18.71 19.5zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.33 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-        </svg>
-        <p class="platform-name">Apple Music</p>
-      </div>
+      <div class="button-row">
+        <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
+          <div class="icon-wrapper">
+            <svg class="icon" viewBox="0 0 24 24" style="color: #1DB954;">
+              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+            </svg>
+          </div>
+          <span>Spotify</span>
+        </a>
 
-      <!-- Instagram -->
-      <div class="platform">
-        <svg class="platform-icon" viewBox="0 0 24 24">
-          <path fill="#E1306C" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-        </svg>
-        <p class="platform-name">إنستغرام</p>
-      </div>
+        <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
+          <div class="icon-wrapper">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97 14.32 22 13.89 21.18 12.37 21.18 10.84 21.18 10.37 21.95 9.1 22 7.79 22.05 6.8 20.68 5.96 19.47 4.25 17 2.94 12.45 4.7 9.39 5.57 7.87 7.13 6.91 8.82 6.88 10.1 6.86 11.32 7.75 12.11 7.75 12.89 7.75 14.37 6.68 15.92 6.84 16.57 6.87 18.39 7.1 19.56 8.82 19.47 8.88 17.39 10.1 17.41 12.63 17.44 15.65 20.06 16.66 20.09 16.67 20.06 16.74 19.67 18.11 18.71 19.5zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.33 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+          </div>
+          <span>Apple Music</span>
+        </a>
 
-      <!-- X (Twitter) -->
-      <div class="platform">
-        <svg class="platform-icon" viewBox="0 0 24 24">
-          <path fill="#000" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-        </svg>
-        <p class="platform-name">𝕏 تويتر</p>
+        <a href="https://instagram.com/i3lsh" target="_blank">
+          <div class="icon-wrapper">
+            <svg class="icon" viewBox="0 0 24 24" style="color: #E1306C;">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+          <span>Instagram</span>
+        </a>
+
+        <a href="https://x.com/i3lsh" target="_blank">
+          <div class="icon-wrapper">
+            <svg class="icon" viewBox="0 0 24 24" style="color: #000;">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <span>𝕏 Twitter</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@i3lsh" target="_blank">
+          <div class="icon-wrapper">
+            <svg class="icon" viewBox="0 0 24 24">
+              <defs>
+                <linearGradient id="tiktokGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#25F4EE"/>
+                  <stop offset="100%" style="stop-color:#FE2C55"/>
+                </linearGradient>
+              </defs>
+              <path fill="url(#tiktokGradient)" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
+          </div>
+          <span>TikTok</span>
+        </a>
       </div>
     </div>
 
-    <a href="https://i3lsh.com" class="website">i3lsh.com</a>
-  </div>
-</body>
-</html>
+    <div class="about-section">
+      <div class="about-title">About Me</div>
+      <div class="about-text">
+        إعلامي سعودي وكانت صحفي و فنان موسيقي من مواليد عام 1995.
+      </div>
+    </div>
+
+    <div class="contact-email">
+      للتواصل: <a href="mailto:info@i3lsh
