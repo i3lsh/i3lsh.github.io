@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>i3lsh | الموقع الرسمي</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <title>i3lsh</title>
   <style>
     body {
-      background: #f5f5f5;
-      font-family: 'Cairo', sans-serif;
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 500px;
+      margin: auto;
     }
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #1da1f2;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
-    .verified-badge {
-      width: 24px;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-    .social a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #1da1f2;
+    .username {
+      font-size: 24px;
       font-weight: bold;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
     }
-    .social a:hover {
-      text-decoration: underline;
+    .username img {
+      width: 20px;
     }
-    .card-custom {
-      max-width: 480px;
-      margin: auto;
-      margin-top: 60px;
-      padding: 40px;
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    .tagline {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .link-btn {
+      display: block;
+      background-color: #6a0dad;
+      color: white;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+      margin: 10px 0;
+      transition: background 0.3s;
+    }
+    .link-btn:hover {
+      background-color: #5800a1;
     }
   </style>
 </head>
 <body>
-
-  <div class="card-custom text-center">
-    <img src="https://i.imgur.com/KQZ5Cge.jpg" alt="i3lsh" class="profile-img">
-    <h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" class="verified-badge" alt="verified">
-      علش العبدلي
-    </h2>
-    <p class="text-muted">فنان موسيقي مستقل</p>
-
-    <div class="social mt-4">
-      <a href="https://instagram.com/i3lsh" target="_blank">إنستغرام</a>
-      <a href="https://x.com/i3lsh" target="_blank">تويتر</a>
-      <a href="https://tiktok.com/@i3lsh" target="_blank">تيك توك</a>
-      <a href="https://bio.link/i3lsh" target="_blank">روابطي</a>
+  <div class="container">
+    <img src="https://i.imgur.com/YOw7KcH.jpg" alt="i3lsh" class="profile-img">
+    <div class="username">
+      @i3lsh
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified">
     </div>
-  </div>
+    <div class="tagline">فنان موسيقي</div>
 
+    <a href="https://g.co/kgs/Za1V5dq" class="link-btn" target="_blank">Google Knowledge Panel</a>
+    <a href="https://instagram.com/i3lsh" class="link-btn" target="_blank">Instagram</a>
+    <a href="https://tiktok.com/@i3lsh" class="link-btn" target="_blank">TikTok</a>
+    <a href="https://youtube.com/@i3lsh" class="link-btn" target="_blank">YouTube</a>
+    <a href="https://music.apple.com/profile/i3lsh" class="link-btn" target="_blank">Apple Music</a>
+    <a href="https://open.spotify.com/artist/i3lsh" class="link-btn" target="_blank">Spotify</a>
+  </div>
 </body>
 </html>
