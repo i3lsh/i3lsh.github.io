@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>بطاقة i3lsh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i3lsh - البطاقة الرسمية</title>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary-bg: #f0f0f0;
-      --button-bg: #f0f0f0;
-      --text-color: #555;
+      --text-color: #2d3436;
       --shadow-color: rgba(163, 177, 198, 0.6);
       --light-shadow: rgba(255, 255, 255, 0.8);
     }
-    
+
     body {
       margin: 0;
       background: var(--primary-bg);
@@ -22,143 +21,141 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
     }
 
     .card {
       background: var(--primary-bg);
-      border-radius: 30px;
+      border-radius: 25px;
       box-shadow: 
-        10px 10px 20px var(--shadow-color),
-        -10px -10px 20px var(--light-shadow);
-      padding: 30px 25px;
-      max-width: 380px;
-      width: 100%;
+        12px 12px 24px var(--shadow-color),
+        -12px -12px 24px var(--light-shadow);
+      padding: 30px;
+      width: 320px;
       text-align: center;
       position: relative;
-      margin-top: 70px;
     }
 
-    /* ... (ابقاء نفس الأنماط السابقة كما هي) ... */
+    .header {
+      margin-bottom: 25px;
+    }
 
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 15px;
+      box-shadow: 
+        6px 6px 12px var(--shadow-color),
+        -6px -6px 12px var(--light-shadow);
+      margin: 0 auto 15px;
+    }
+
+    .name {
+      font-size: 24px;
+      color: var(--text-color);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .verified-badge {
+      width: 20px;
+      height: 20px;
+    }
+
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .platform {
+      background: var(--primary-bg);
+      border-radius: 15px;
+      padding: 12px;
+      box-shadow: 
+        6px 6px 12px var(--shadow-color),
+        -6px -6px 12px var(--light-shadow);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .platform:hover {
+      transform: translateY(-3px);
+    }
+
+    .platform-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .platform-name {
+      color: var(--text-color);
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .website {
+      display: block;
+      color: #4285f4;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 
+        inset 3px 3px 6px var(--shadow-color),
+        inset -3px -3px 6px var(--light-shadow);
+    }
   </style>
 </head>
 <body>
-  
   <div class="card">
-    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" />
-
-    <div class="name">
-      i3lsh
-      <img class="verified-badge" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified">
+    <div class="header">
+      <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" class="logo">
+      <h1 class="name">
+        i3lsh
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified" class="verified-badge">
+      </h1>
     </div>
 
-    <div class="tagline">
-      فنان موسيقي
-    </div>
-
-    <div class="buttons-container">
-      <div class="button-single">
-        <a href="https://g.co/kgs/Za1V5dq" target="_blank">
-          <div class="icon-wrapper">
-            <!-- ايقونة Google -->
-          </div>
-          <span>Google Knowledge Panel</span>
-        </a>
+    <div class="platforms">
+      <!-- Google Knowledge Panel -->
+      <div class="platform">
+        <img src="https://www.gstatic.com/images/branding/product/1x/knowledge_panel_48dp.png" alt="Google" class="platform-icon">
+        <p class="platform-name">لوحة المعرفة</p>
       </div>
 
-      <div class="button-row">
-        <!-- Spotify -->
-        <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
-          <div class="icon-wrapper">
-            <!-- ايقونة Spotify -->
-          </div>
-          <span>Spotify</span>
-        </a>
-
-        <!-- Apple Music -->
-        <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
-          <div class="icon-wrapper">
-            <!-- ايقونة Apple Music -->
-          </div>
-          <span>Apple Music</span>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com/i3lsh" target="_blank">
-          <div class="icon-wrapper">
-            <!-- ايقونة Instagram -->
-          </div>
-          <span>Instagram</span>
-        </a>
-
-        <!-- 𝕏 Twitter -->
-        <a href="https://x.com/i3lsh" target="_blank">
-          <div class="icon-wrapper">
-            <!-- ايقونة Twitter/X -->
-          </div>
-          <span>𝕏 Twitter</span>
-        </a>
-
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@i3lsh" target="_blank">
-          <div class="icon-wrapper">
-            <!-- ايقونة TikTok -->
-          </div>
-          <span>TikTok</span>
-        </a>
-
-        <!-- Anghami -->
-        <a href="https://play.anghami.com/artist/24398175" target="_blank">
-          <div class="icon-wrapper">
-            <svg class="icon" viewBox="0 0 24 24" style="color: #FF5500;">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.042 14.914c-.2.4-.6.7-1 .7h-3.5v1.8h2.3c.4 0 .7.3.7.7v.3c0 .4-.3.7-.7.7H9.7c-.4 0-.7-.3-.7-.7v-.3c0-.4.3-.7.7-.7h2.3v-1.8H8c-.4 0-.8-.3-1-.7-.2-.4-.1-.8.2-1.1l4-4.7c.3-.3.7-.4 1.1-.2.4.2.6.6.6 1v3.3h3.5c.4 0 .8.3 1 .7.2.4.1.8-.2 1.1l-1.8 2.1z"/>
-            </svg>
-          </div>
-          <span>Anghami</span>
-        </a>
-
-        <!-- Deezer -->
-        <a href="https://www.deezer.com/ar/artist/321068151" target="_blank">
-          <div class="icon-wrapper">
-            <svg class="icon" viewBox="0 0 24 24" style="color: #FEAA2D;">
-              <path d="M19.68 14.93v-1.4h-1.4v1.4h1.4zm-2.8 0v-1.4h-1.4v1.4h1.4zm-2.8 0v-1.4h-1.4v1.4h1.4zm-2.8 0v-1.4H9.88v1.4h1.4zm-2.8 0v-1.4H7.08v1.4h1.4zm-2.8 0v-1.4H4.28v1.4h1.4zM19.68 12.13v-1.4h-1.4v1.4h1.4zm0-2.8V7.93h-1.4v1.4h1.4zm0-2.8V5.13h-1.4v1.4h1.4zm0-2.8V2.33h-1.4v1.4h1.4z"/>
-            </svg>
-          </div>
-          <span>Deezer</span>
-        </a>
-
-        <!-- Snapchat -->
-        <a href="https://www.snapchat.com/add/i3lsh" target="_blank">
-          <div class="icon-wrapper">
-            <svg class="icon" viewBox="0 0 24 24" style="color: #FFFC00;">
-              <path d="M12.206 0C5.918 0 .71 5.208.71 11.496c0 4.219 2.558 7.834 6.186 9.387-.101-.844-.18-2.125.039-3.036.18-.773 1.154-4.922 1.154-4.922s-.297-.594-.297-1.47c0-1.377.797-2.402 1.79-2.402.844 0 1.252.633 1.252 1.393 0 .848-.536 2.117-.813 3.293-.23.984.492 1.785 1.46 1.785 1.752 0 3.098-1.846 3.098-4.508 0-2.36-1.695-4.008-4.117-4.008-2.805 0-4.453 2.109-4.453 4.297 0 .848.329 1.757.742 2.254.083.098.094.18.067.282-.074.312-.242.98-.275 1.117-.043.18-.144.219-.334.131-1.253-.583-2.036-2.416-2.036-3.889 0-3.164 2.293-6.07 6.605-6.07 3.468 0 6.164 2.473 6.164 5.777 0 3.447-2.175 6.221-5.195 6.221-1.014 0-1.969-.527-2.296-1.151-.438.844-1.1 1.584-2.078 2.111-.75.422-1.61.633-2.48.711.463.398 1.175.629 1.888.629 2.32 0 4.363-1.523 5.227-3.621 1.078 1.03 2.45 1.655 3.98 1.655 4.758 0 7.242-4.219 7.242-7.922 0-5.289-4.297-9.586-9.586-9.586z"/>
-            </svg>
-          </div>
-          <span>Snapchat</span>
-        </a>
+      <!-- Apple Music -->
+      <div class="platform">
+        <svg class="platform-icon" viewBox="0 0 24 24">
+          <path fill="#000" d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97 14.32 22 13.89 21.18 12.37 21.18 10.84 21.18 10.37 21.95 9.1 22 7.79 22.05 6.8 20.68 5.96 19.47 4.25 17 2.94 12.45 4.7 9.39 5.57 7.87 7.13 6.91 8.82 6.88 10.1 6.86 11.32 7.75 12.11 7.75 12.89 7.75 14.37 6.68 15.92 6.84 16.57 6.87 18.39 7.1 19.56 8.82 19.47 8.88 17.39 10.1 17.41 12.63 17.44 15.65 20.06 16.66 20.09 16.67 20.06 16.74 19.67 18.11 18.71 19.5zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.33 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <p class="platform-name">Apple Music</p>
       </div>
 
-      <!-- زر التواصل -->
-      <div class="button-single">
-        <a href="mailto:info@i3lsh.com">
-          <div class="icon-wrapper">
-            <svg class="icon" viewBox="0 0 24 24" style="color: #4285F4;">
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
-            </svg>
-          </div>
-          <span>Contact me: info@i3lsh.com</span>
-        </a>
+      <!-- Instagram -->
+      <div class="platform">
+        <svg class="platform-icon" viewBox="0 0 24 24">
+          <path fill="#E1306C" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+        <p class="platform-name">إنستغرام</p>
+      </div>
+
+      <!-- X (Twitter) -->
+      <div class="platform">
+        <svg class="platform-icon" viewBox="0 0 24 24">
+          <path fill="#000" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        <p class="platform-name">𝕏 تويتر</p>
       </div>
     </div>
 
-    <div class="about-section">
-      <div class="about-title">About Me</div>
-      <div class="about-text">
-            فنان موسيقي سعودي وناشط إجتماعي على وسائل التواصل الإجتماعي من مواليد عام 1995م.
-      </div>
-    </div>
+    <a href="https://i3lsh.com" class="website">i3lsh.com</a>
   </div>
-
 </body>
 </html>
