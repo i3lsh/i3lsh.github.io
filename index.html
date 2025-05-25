@@ -55,17 +55,22 @@
             z-index: -1;
         }
         
-        .profile-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
+        .profile-header {
+            position: relative;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .profile-info {
-            padding: 25px;
-            text-align: center;
-            position: relative;
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
         }
         
         .name {
@@ -78,17 +83,66 @@
             justify-content: center;
         }
         
+        .title {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
         .verified {
             color: #1DA1F2;
             margin-right: 5px;
             font-size: 20px;
         }
         
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .profile-content {
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-title i {
+            color: #1DA1F2;
+        }
+        
+        .about-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
         .social-links {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 30px;
+            gap: 12px;
         }
         
         .social-link {
@@ -111,12 +165,12 @@
         }
         
         .social-icon {
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 8px;
         }
         
         .social-name {
-            font-size: 12px;
+            font-size: 11px;
             opacity: 0.8;
         }
         
@@ -147,12 +201,17 @@
             }
         }
         
-        /* تأثيرات إضافية */
         .particle {
             position: absolute;
             background: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             pointer-events: none;
+        }
+        
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -161,62 +220,76 @@
         <div class="glow"></div>
         <div class="glow"></div>
         
-        <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" class="profile-img">
-        
-        <div class="profile-info">
+        <div class="profile-header">
+            <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" class="profile-img">
             <h1 class="name">
-                @i3lsh <i class="fas fa-check-circle verified"></i>
+                i3lsh <i class="fas fa-check-circle verified"></i>
             </h1>
+            <div class="title">فنان موسيقي 💡</div>
             
-            <div class="social-links">
-                <a href="https://x.com/i3lsh" target="_blank" class="social-link">
-                    <i class="fab fa-twitter social-icon" style="color: #1DA1F2;"></i>
-                    <span class="social-name">Twitter</span>
-                </a>
-                <a href="https://www.tiktok.com/@i3lsh" target="_blank" class="social-link">
-                    <i class="fab fa-tiktok social-icon" style="color: #FF0050;"></i>
-                    <span class="social-name">TikTok</span>
-                </a>
-                <a href="https://instagram.com/i3lsh" target="_blank" class="social-link">
-                    <i class="fab fa-instagram social-icon" style="color: #E1306C;"></i>
-                    <span class="social-name">Instagram</span>
-                </a>
-                <a href="https://gettr.com/user/i3lsh" target="_blank" class="social-link">
-                    <i class="fas fa-comment-dots social-icon" style="color: #7EBAFF;"></i>
-                    <span class="social-name">Gettr</span>
-                </a>
-                <a href="https://vero.co/i3lsh" target="_blank" class="social-link">
-                    <i class="fas fa-heart social-icon" style="color: #FF3A44;"></i>
-                    <span class="social-name">Vero</span>
-                </a>
-                <a href="https://noomvibe.app/i3lsh" target="_blank" class="social-link">
-                    <i class="fas fa-music social-icon" style="color: #8A2BE2;"></i>
-                    <span class="social-name">Noomvibe</span>
-                </a>
-                <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank" class="social-link">
-                    <i class="fab fa-apple social-icon" style="color: #A3AAAE;"></i>
-                    <span class="social-name">Apple Music</span>
-                </a>
-                <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN?si=eP0e9p6kSg27tS0y88zH-g" target="_blank" class="social-link">
-                    <i class="fab fa-spotify social-icon" style="color: #1DB954;"></i>
-                    <span class="social-name">Spotify</span>
-                </a>
-                <a href="https://anghami.com/artist/24398175" target="_blank" class="social-link">
-                    <i class="fas fa-headphones social-icon" style="color: #FF5500;"></i>
-                    <span class="social-name">Anghami</span>
-                </a>
-                <a href="https://i.y.qq.com/v8/playsong.html?ADTAG=ryqq.songDetail&songmid=0034cyMV019RVe&songid=0&songtype=0#webchat_redirect" target="_blank" class="social-link">
-                    <i class="fab fa-qq social-icon" style="color: #12B7F5;"></i>
-                    <span class="social-name">QQ Music</span>
-                </a>
-                <a href="https://tidal.com/browse/artist/58033811?u" target="_blank" class="social-link">
-                    <i class="fas fa-wave-square social-icon" style="color: #00FFFF;"></i>
-                    <span class="social-name">Tidal</span>
-                </a>
-                <a href="https://g.co/kgs/Za1V5dq" target="_blank" class="social-link">
-                    <i class="fab fa-google social-icon" style="color: #4285F4;"></i>
-                    <span class="social-name">Google</span>
-                </a>
+            <div class="badges">
+                <div class="badge">
+                    <i class="fab fa-google"></i> Google Panel
+                </div>
+                <div class="badge">
+                    <i class="fab fa-spotify"></i> Spotify
+                </div>
+                <div class="badge">
+                    <i class="fab fa-apple"></i> Apple
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-content">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-user"></i> نبذة عني</h2>
+                <p class="about-text">
+                    إعلامي سعودي وكانت صحفي و فنان موسيقي من مواليد عام 1995.
+                </p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-link"></i> روابط التواصل</h2>
+                <div class="social-links">
+                    <a href="https://x.com/i3lsh" target="_blank" class="social-link">
+                        <i class="fab fa-twitter social-icon" style="color: #1DA1F2;"></i>
+                        <span class="social-name">Twitter</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@i3lsh" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok social-icon" style="color: #FF0050;"></i>
+                        <span class="social-name">TikTok</span>
+                    </a>
+                    <a href="https://instagram.com/i3lsh" target="_blank" class="social-link">
+                        <i class="fab fa-instagram social-icon" style="color: #E1306C;"></i>
+                        <span class="social-name">Instagram</span>
+                    </a>
+                    <a href="https://gettr.com/user/i3lsh" target="_blank" class="social-link">
+                        <i class="fas fa-comment-dots social-icon" style="color: #7EBAFF;"></i>
+                        <span class="social-name">Gettr</span>
+                    </a>
+                    <a href="https://vero.co/i3lsh" target="_blank" class="social-link">
+                        <i class="fas fa-heart social-icon" style="color: #FF3A44;"></i>
+                        <span class="social-name">Vero</span>
+                    </a>
+                    <a href="https://noomvibe.app/i3lsh" target="_blank" class="social-link">
+                        <i class="fas fa-music social-icon" style="color: #8A2BE2;"></i>
+                        <span class="social-name">Noomvibe</span>
+                    </a>
+                    <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank" class="social-link">
+                        <i class="fab fa-apple social-icon" style="color: #A3AAAE;"></i>
+                        <span class="social-name">Apple Music</span>
+                    </a>
+                    <a href="https://g.co/kgs/Za1V5dq" target="_blank" class="social-link">
+                        <i class="fab fa-google social-icon" style="color: #4285F4;"></i>
+                        <span class="social-name">Google</span>
+                    </a>
+                    <a href="https://peoplepill.com/i/i3lsh/" target="_blank" class="social-link">
+                        <i class="fas fa-user social-icon" style="color: #FF9800;"></i>
+                        <span class="social-name">PeoplePill</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -226,7 +299,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const card = document.querySelector('.card');
             
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 15; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 
