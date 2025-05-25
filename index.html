@@ -7,75 +7,76 @@
   <style>
     body {
       margin: 0;
-      background: linear-gradient(135deg, #f1f1f1, #ffffff);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
+
     .card {
       background: #fff;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
       padding: 30px;
       text-align: center;
       width: 300px;
-      transform: rotate(-1.5deg);
+      transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
     }
-    .profile-pic {
-      width: 100px;
-      height: 100px;
+
+    .avatar {
+      width: 120px;
+      height: 120px;
       border-radius: 15px;
       object-fit: cover;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    h2 {
-      margin: 10px 0 5px;
-      font-size: 22px;
-      font-weight: 700;
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 15px 0 5px;
     }
+
     .verified {
-      color: #1DA1F2;
+      color: #1da1f2;
       font-size: 18px;
       vertical-align: middle;
-      margin-right: 5px;
     }
-    p {
-      color: #555;
+
+    .role {
+      font-size: 15px;
+      color: #666;
       margin-bottom: 20px;
-      font-size: 14px;
     }
-    .icons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-    .icons a {
+
+    .socials a {
+      margin: 0 8px;
       text-decoration: none;
       color: #333;
       font-size: 20px;
+      transition: transform 0.2s;
     }
-    .icons a:hover {
-      color: #1DA1F2;
+
+    .socials a:hover {
+      transform: scale(1.2);
     }
   </style>
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="card">
-    <img src="https://i.ibb.co/ZL1dt51/i3lsh-profile.jpg" alt="i3lsh" class="profile-pic" />
-    <h2>
-      <span class="verified"><i class="fas fa-check-circle"></i></span>i3lsh
-    </h2>
-    <p>فنان موسيقي</p>
-    <div class="icons">
+    <img src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-_____.jpg" alt="i3lsh" class="avatar">
+    <div class="name">i3lsh <i class="fas fa-check-circle verified"></i></div>
+    <div class="role">فنان موسيقي</div>
+    <div class="socials">
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-youtube"></i></a>
       <a href="#"><i class="fab fa-spotify"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
     </div>
   </div>
 </body>
