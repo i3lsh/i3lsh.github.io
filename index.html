@@ -8,14 +8,14 @@
   <style>
     :root {
       --primary-bg: #f0f0f0;
-      --text-color: #555;
-      --shadow-color: rgba(163, 177, 198, 0.6);
-      --light-shadow: rgba(255, 255, 255, 0.8);
+      --text-color: #eee;
+      --shadow-color: rgba(0, 0, 0, 0.3);
+      --light-shadow: rgba(255, 255, 255, 0.05);
     }
 
     body {
       margin: 0;
-      background: #000;
+      background: linear-gradient(to bottom, #111, #000);
       font-family: 'Tajawal', sans-serif;
       display: flex;
       justify-content: center;
@@ -25,9 +25,9 @@
     }
 
     .card {
-      background: var(--primary-bg);
+      background: #1b1b1b;
       border-radius: 30px;
-      box-shadow: 10px 10px 20px var(--shadow-color), -10px -10px 20px var(--light-shadow);
+      box-shadow: 10px 10px 30px rgba(0,0,0,0.6), -10px -10px 30px rgba(255,255,255,0.05);
       padding: 30px 25px;
       max-width: 400px;
       width: 100%;
@@ -41,36 +41,38 @@
       height: 130px;
       border-radius: 20px;
       object-fit: cover;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+      filter: grayscale(100%);
+      background-color: #444;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
       position: absolute;
       top: -65px;
       left: 50%;
       transform: translateX(-50%);
-      border: 3px solid var(--primary-bg);
+      border: 3px solid #1b1b1b;
     }
 
     .name {
-      font-size: 24px;
-      font-weight: Tajawal', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       margin-top: 80px;
-      margin-bottom: 8px;
-      color: var(--text-color);
+      margin-bottom: 5px;
+      color: #fff;
     }
 
     .verified-badge {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
+      width: 22px;
+      height: 22px;
       margin-top: -2px;
     }
 
     .tagline {
-      font-size: 16px;
-      color: var(--text-color);
+      font-size: 17px;
+      font-weight: 400;
+      color: #ccc;
       margin-bottom: 25px;
     }
 
@@ -88,38 +90,31 @@
 
     .button-single a,
     .button-row a {
-      background: #fff;
+      background: #2a2a2a;
       border-radius: 16px;
       padding: 12px;
       text-decoration: none;
-      color: var(--text-color);
-      font-weight: bold;
+      color: #fff;
+      font-weight: 600;
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
       gap: 12px;
+      box-shadow: 8px 8px 16px rgba(0,0,0,0.3), -4px -4px 12px rgba(255,255,255,0.05);
       transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      position: relative;
       min-height: 50px;
       direction: rtl;
     }
 
     .button-single a:hover,
     .button-row a:hover {
-      box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px var(--light-shadow);
       transform: translateY(2px);
-    }
-
-    .button-single a:active,
-    .button-row a:active {
-      box-shadow: inset 3px 3px 5px var(--shadow-color), inset -3px -3px 5px var(--light-shadow);
-      transform: translateY(4px);
+      box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
     }
 
     .icon-wrapper {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -132,22 +127,22 @@
     }
 
     .about-section {
-      margin-top: 30px;
+      margin-top: 35px;
       padding-top: 20px;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .about-title {
       font-size: 18px;
       font-weight: bold;
-      color: var(--text-color);
-      margin-bottom: 10px;
+      color: #fff;
+      margin-bottom: 12px;
     }
 
     .about-text {
       font-size: 15px;
-      color: var(--text-color);
-      line-height: 1.6;
+      color: #ddd;
+      line-height: 1.8;
     }
 
     .email-button {
@@ -163,7 +158,7 @@
       padding: 12px 20px;
       border-radius: 12px;
       text-decoration: none;
-      box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
       transition: 0.3s ease;
     }
 
@@ -190,7 +185,7 @@
           <div class="icon-wrapper">
             <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
           </div>
-          Google Knowledge Panel
+          Google
         </a>
       </div>
 
@@ -203,7 +198,7 @@
         </a>
         <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
           <div class="icon-wrapper">
-            <img class="icon" src="https://www.svgrepo.com/show/349299/apple-music.svg" alt="Apple">
+            <img class="icon" src="https://www.svgrepo.com/show/349299/apple-music.svg" alt="Apple Music">
           </div>
           Apple Music
         </a>
@@ -220,7 +215,7 @@
           <div class="icon-wrapper">
             <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X">
           </div>
-           X
+          X
         </a>
       </div>
 
