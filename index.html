@@ -1,23 +1,21 @@
-للتعديل جيد
-
-جيد نوعًا ما
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>بطاقة i3lsh</title>
-  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
-      background: linear-gradient(to bottom right, #0f1113, #2c2f32);
-      font-family: 'Almarai', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      font-family: 'Tajawal', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      padding: 60px 20px;
+      min-height: 100vh;
+      padding: 20px;
     }
 
     .card {
@@ -25,10 +23,11 @@
       border-radius: 30px;
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
       padding: 30px 25px;
-      max-width: 360px;
+      max-width: 380px;
       width: 100%;
       text-align: center;
       position: relative;
+      margin-top: 70px;
     }
 
     .profile {
@@ -41,10 +40,11 @@
       top: -65px;
       left: 50%;
       transform: translateX(-50%);
+      border: 3px solid white;
     }
 
     .name {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: bold;
       display: flex;
       align-items: center;
@@ -52,24 +52,18 @@
       gap: 6px;
       margin-top: 80px;
       margin-bottom: 8px;
+      color: #333;
     }
 
-    .name img {
-      width: 16px;
+    .verified-badge {
+      color: #1DA1F2;
+      font-size: 20px;
     }
 
     .tagline {
-      font-size: 15px;
+      font-size: 16px;
       color: #555;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
       margin-bottom: 25px;
-    }
-
-    .tagline img {
-      width: 15px;
     }
 
     .button-single {
@@ -89,91 +83,123 @@
       justify-content: center;
       gap: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-      transition: 0.2s;
+      transition: all 0.3s ease;
       margin-bottom: 10px;
+      border: 1px solid #f0f0f0;
     }
 
     .button-single a:hover,
     .button-row a:hover {
-      background: #f0f0f0;
-      transform: translateY(-2px);
-    }
-
-    .button-single img,
-    .button-row img {
-      width: 20px;
-      height: 20px;
+      background: #f8f8f8;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     .button-row {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
-    .about {
-      margin-top: 40px;
-      color: #fff;
-      line-height: 1.8;
-      font-size: 16px;
-      text-align: center;
+    .about-section {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
     }
 
-    .about strong {
+    .about-title {
       font-size: 18px;
-      display: block;
+      font-weight: bold;
+      color: #333;
       margin-bottom: 10px;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+‎    /* تأثيرات إضافية */
+    .social-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .glow {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29, 161, 242, 0.3), transparent 70%);
+      filter: blur(15px);
+      z-index: -1;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(20px, 20px);
+      }
     }
   </style>
 </head>
 <body>
 
+  <div class="glow"></div>
+  
   <div class="card">
     <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh" />
 
     <div class="name">
       i3lsh
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" />
+      <i class="fas fa-check-circle verified-badge"></i>
     </div>
 
     <div class="tagline">
-      فنان موسيقي
+‎      فنان موسيقي
     </div>
 
     <div class="button-single">
       <a href="https://g.co/kgs/Za1V5dq" target="_blank">
-        <img src="https://www.google.com/favicon.ico" alt="Google">
+        <i class="fab fa-google" style="color: #4285F4;"></i>
         Google Knowledge Panel
       </a>
     </div>
 
     <div class="button-row">
       <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_icon.svg" alt="Spotify">
+        <i class="fab fa-spotify" style="color: #1DB954;"></i>
         Spotify
       </a>
       <a href="http://music.apple.com/us/artist/i3lsh/1812249253" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+        <i class="fab fa-apple" style="color: #000;"></i>
         Apple Music
       </a>
       <a href="https://instagram.com/i3lsh" target="_blank">
-        <img src="https://www.instagram.com/favicon.ico" alt="Instagram">
+        <i class="fab fa-instagram" style="color: #E1306C;"></i>
         Instagram
       </a>
       <a href="https://x.com/i3lsh" target="_blank">
-        <img src="https://abs.twimg.com/favicons/twitter.2.ico" alt="X">
+        <i class="fab fa-twitter" style="color: #1DA1F2;"></i>
         Twitter (X)
       </a>
       <a href="https://www.tiktok.com/@i3lsh" target="_blank">
-        <img src="https://www.tiktok.com/favicon.ico" alt="TikTok">
+        <i class="fab fa-tiktok" style="color: #FF0050;"></i>
         TikTok
       </a>
     </div>
-  </div>
 
-  <div class="about">
-    <strong>About Me</strong>
-    فنان موسيقي سعودي من مواليد عام 1995م.
+    <div class="about-section">
+      <div class="about-title">About Me</div>
+      <div class="about-text">
+‎        فنان موسيقي سعودي من مواليد عام 1995.
+      </div>
+    </div>
   </div>
 
 </body>
