@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist i3lsh</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #f0f0f0;
+      --text-color: #555;
+      --shadow-color: rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--primary-bg);
+      border-radius: 30px;
+      box-shadow: 0 10px 30px var(--shadow-color);
+      padding: 30px 25px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      margin-top: 70px;
+    }
+
+    .profile {
+      width: 130px;
+      height: 130px;
+      border-radius: 20px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      position: absolute;
+      top: -65px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 3px solid var(--primary-bg);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin: 80px 0 10px;
+      color: var(--text-color);
+    }
+
+    .verified-badge {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-color);
+      margin-bottom: 7px;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .button-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .social-button {
+      background: #fff;
+      border-radius: 16px;
+      padding: 12px;
+      text-decoration: none;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+      border: 1px solid #eee;
+    }
+
+    .social-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .icon-wrapper {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .about-section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .about-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .about-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .email-button {
+      text-align: center;
+    }
+
+    .language-switch {
+      margin-bottom: 15px;
+      text-align: right;
+    }
+
+    .language-switch a {
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+    }
+
+    .language-switch a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="language-switch">
+      <a href="index.html">العربية</a>
+    </div>
+
+    <img class="profile" src="https://res.cloudinary.com/dpwtifffk/image/upload/v1748146003/B6DCD380-487D-4A46-B608-97DF1772DFDE_qu6b5o.jpg" alt="i3lsh">
+
+    <div class="name">
+      i3lsh
+      <img class="verified-badge" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified">
+    </div>
+
+    <div class="tagline">Music Artist | فنان</div>
+
+    <div class="button-row" style="grid-template-columns: 1fr; margin-bottom: -20px;">
+      <a href="https://g.co/kgs/Za1V5dq" class="social-button" target="_blank" style="justify-content: center; text-align: center;">
+        <div class="icon-wrapper" style="margin-right: 8px;">
+          <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+        </div>
+        <span style="font-weight: 500;">Google Knowledge Panel</span>
+      </a>
+    </div>
+
+    <div class="buttons-container">
+      <div class="button-row">
+        <a href="https://open.spotify.com/artist/5i6w04ucgQGprhZIHaC9zN" class="social-button" target="_blank">
+          <div class="icon-wrapper">
+            <img class="icon" src="https://www.svgrepo.com/show/475684/spotify-color.svg" alt="Spotify">
+          </div>
+          Spotify
+        </a>
+        <a href="http://music.apple.com/us/artist/i3lsh/1812249253" class="social-button" target="_blank">
+          <div class="icon-wrapper">
+            <img class="icon" src="https://www.svgrepo.com/show/349299/apple-music.svg" alt="Apple Music">
+          </div>
+          Apple Music
+        </a>
+      </div>
+
+      <div class="button-row">
+        <a href="https://instagram.com/i3lsh" class="social-button" target="_blank">
+          <div class="icon-wrapper">
+            <img class="icon" src="https://files.brandlogos.net/svg/6pHg9QdYGc/Instagram_Glyph_Gradient-OtLvHCP55_brandlogos.net.svg" alt="Instagram">
+          </div>
+          Instagram
+        </a>
+        <a href="https://x.com/i3lsh" class="social-button" target="_blank">
+          <div class="icon-wrapper">
+            <img class="icon" src="https://files.brandlogos.net/svg/Hv9NWCdaxf/x-twitter-logo-brandlogos.net_ql9mwdqgs.svg" alt="X">
+          </div>
+          X
+        </a>
+      </div>
+
+      <div class="button-row">
+        <a href="https://www.tiktok.com/@i3lsh" class="social-button" target="_blank">
+          <div class="icon-wrapper">
+            <img class="icon" src="https://www.svgrepo.com/show/452114/tiktok.svg" alt="TikTok">
+          </div>
+          TikTok
+        </a>
+        <a href="https://play.anghami.com/artist/24398175" class="social-button" target="_blank">
+          <div class="icon-wrapper">
+            <img class="icon" src="https://files.brandlogos.net/svg/JjhxtycdZ5/Anghami-OLCuNDGBr_brandlogos.net.svg" alt="Anghami">
+          </div>
+          Anghami
+        </a>
+      </div>
+
+      <div class="button-row">
+        <a href="https://www.snapchat.com/add/i3lsh" class="social-button" target="_blank">
+          <div class="icon-wrapper">
+            <img class="icon" src="https://www.svgrepo.com/show/303130/snapchat-logo.svg" alt="Snapchat">
+          </div>
+          Snapchat
+        </a>
+        <a href="mailto:info@i3lsh.com" class="social-button" target="_blank">
+          <div class="icon-wrapper">
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email">
+          </div>
+          Contact Me 
+        </a>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h2 class="about-title">About Me</h2>
+      <p class="about-text">Saudi music artist and social activist, born in 1995.</p>
+    </div>
+
+    <div class="email-button">
+      <p style="font-size: 13px; color: #888; text-align: center; margin: 30px 0 0;">
+        © All rights reserved to the artist <strong>i3lsh</strong>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
